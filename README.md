@@ -292,7 +292,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 - GitHub: [@ShivamNox](https://github.com/ShivamNox)
-- Email: your.email@example.com
+- Email: shivamnox@gmail.com
 
 ---
 
