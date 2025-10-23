@@ -1,78 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-Commerce API Documentation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converted from Markdown</title>
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 1000px;
-      background-color: #fafafa;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
     }
-    h1, h2, h3, h4 {
-      color: #2a6592;
-    }
-    h1 {
-      text-align: center;
-    }
+    h1, h2, h3 { color: #333; margin-top: 1.5em; margin-bottom: 0.5em; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.2em; }
     code {
-      background-color: #f4f4f4;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
     }
     pre {
-      background: #f0f0f0;
+      background: #f4f4f4;
       padding: 15px;
-      border-radius: 6px;
+      border-radius: 5px;
       overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      line-height: 1.4;
+    }
+    blockquote {
+      border-left: 4px solid #ddd;
+      margin: 1em 0;
+      padding-left: 20px;
+      color: #666;
+      font-style: italic;
     }
     table {
-      width: 100%;
       border-collapse: collapse;
+      width: 100%;
       margin: 1em 0;
     }
     th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
       text-align: left;
     }
     th {
-      background-color: #f2f2f2;
+      background-color: #f5f5f5;
+      font-weight: bold;
     }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
+    ul, ol {
+      margin: 1em 0;
+      padding-left: 2em;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    .toc {
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-    .toc ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .toc li {
-      margin: 6px 0;
+    li {
+      margin: 0.5em 0;
     }
   </style>
 </head>
 <body>
-
-<h1 id="-e-commerce-api-complete-documentation">🛒 E-Commerce API - Complete Documentation</h1>
+<h1>🛒 E-Commerce API - Complete Documentation</h1>
 <p><strong>Version:</strong> 2.0.0<br><strong>Last Updated:</strong> October 2025<br><strong>Base URL:</strong> <code>http://localhost:5000/api</code></p>
 <hr>
-<h2 id="-table-of-contents">📑 Table of Contents</h2>
+<h2>📑 Table of Contents</h2>
 <ol>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
@@ -89,10 +82,10 @@
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 </ol>
 <hr>
-<h2 id="-introduction">🎯 Introduction</h2>
-<h3 id="overview">Overview</h3>
+<h2>🎯 Introduction</h2>
+<h3>Overview</h3>
 <p>This is a comprehensive, production-ready e-commerce REST API built with Node.js, Express, and MongoDB. It provides a complete backend solution for online shopping platforms with features including user authentication, product management, shopping cart, order processing, payment integration, and admin panel.</p>
-<h3 id="key-features">Key Features</h3>
+<h3>Key Features</h3>
 <ul>
 <li>✅ JWT-based authentication &amp; authorization</li>
 <li>✅ Role-based access control (User/Admin)</li>
@@ -106,7 +99,7 @@
 <li>✅ Security best practices (Helmet, Rate limiting, CORS)</li>
 <li>✅ Input validation &amp; error handling</li>
 </ul>
-<h3 id="technology-stack">Technology Stack</h3>
+<h3>Technology Stack</h3>
 <ul>
 <li><strong>Runtime:</strong> Node.js v14+</li>
 <li><strong>Framework:</strong> Express.js v4.18</li>
@@ -118,8 +111,8 @@
 <li><strong>Validation:</strong> Joi v17</li>
 </ul>
 <hr>
-<h2 id="-getting-started">🚀 Getting Started</h2>
-<h3 id="prerequisites">Prerequisites</h3>
+<h2>🚀 Getting Started</h2>
+<h3>Prerequisites</h3>
 <p>Before you begin, ensure you have the following installed:</p>
 <ul>
 <li>Node.js (v14 or higher)</li>
@@ -128,76 +121,77 @@
 <li>Stripe account (for payments)</li>
 <li>Postman or similar API testing tool</li>
 </ul>
-<h3 id="quick-start-5-minutes-">Quick Start (5 Minutes)</h3>
-<pre><code class="lang-bash"><span class="hljs-comment"># 1. Clone the repository</span>
+<h3>Quick Start (5 Minutes)</h3>
+<pre><code class="language-bash"># 1. Clone the repository
 git clone &lt;your-repo-url&gt;
 cd ecommerce-api
 
-<span class="hljs-comment"># 2. Install dependencies</span>
+# 2. Install dependencies
 npm install
 
-<span class="hljs-comment"># 3. Create .env file</span>
-cp .<span class="hljs-keyword">env</span>.example .<span class="hljs-keyword">env</span>
-<span class="hljs-comment"># Edit .env with your configurations</span>
+# 3. Create .env file
+cp .env.example .env
+# Edit .env with your configurations
 
-<span class="hljs-comment"># 4. Start MongoDB</span>
+# 4. Start MongoDB
 mongod
 
-<span class="hljs-comment"># 5. Seed database (optional)</span>
-npm <span class="hljs-keyword">run</span><span class="bash"> seed
-</span>
-<span class="hljs-comment"># 6. Start the server</span>
-npm <span class="hljs-keyword">run</span><span class="bash"> dev</span>
+# 5. Seed database (optional)
+npm run seed
+
+# 6. Start the server
+npm run dev
 </code></pre>
 <p>Server will be running at <code>http://localhost:5000</code></p>
 <hr>
-<h2 id="-architecture-overview">🏗️ Architecture Overview</h2>
-<h3 id="project-structure">Project Structure</h3>
+<h2>🏗️ Architecture Overview</h2>
+<h3>Project Structure</h3>
 <pre><code>ecommerce-api/
 │
-├── config/                    <span class="hljs-comment"># Configuration files</span>
-│   ├── db.js                 <span class="hljs-comment"># MongoDB connection</span>
-│   └── stripe.js             <span class="hljs-comment"># Stripe configuration</span>
+├── config/                    # Configuration files
+│   ├── db.js                 # MongoDB connection
+│   └── stripe.js             # Stripe configuration
 │
-├── controllers/              <span class="hljs-comment"># Business logic</span>
-│   ├── authController.js    <span class="hljs-comment"># Authentication logic</span>
-│   ├── productController.js <span class="hljs-comment"># Product operations</span>
-│   ├── cartController.js    <span class="hljs-comment"># Cart management</span>
-│   ├── orderController.js   <span class="hljs-comment"># Order processing</span>
-│   ├── reviewController.js  <span class="hljs-comment"># Review management</span>
-│   └── adminController.js   <span class="hljs-comment"># Admin operations</span>
+├── controllers/              # Business logic
+│   ├── authController.js    # Authentication logic
+│   ├── productController.js # Product operations
+│   ├── cartController.js    # Cart management
+│   ├── orderController.js   # Order processing
+│   ├── reviewController.js  # Review management
+│   └── adminController.js   # Admin operations
 │
-├── middleware/              <span class="hljs-comment"># Custom middleware</span>
-│   ├── authMiddleware.js   <span class="hljs-comment"># JWT verification</span>
-│   ├── adminMiddleware.js  <span class="hljs-comment"># Admin authorization</span>
-│   ├── errorMiddleware.js  <span class="hljs-comment"># Error handling</span>
-│   └── validationMiddleware.js <span class="hljs-comment"># Input validation</span>
+├── middleware/              # Custom middleware
+│   ├── authMiddleware.js   # JWT verification
+│   ├── adminMiddleware.js  # Admin authorization
+│   ├── errorMiddleware.js  # Error handling
+│   └── validationMiddleware.js # Input validation
 │
-├── models/                  <span class="hljs-comment"># Database models</span>
-│   ├── <span class="hljs-keyword">User</span>.js             <span class="hljs-comment"># User schema</span>
-│   ├── Product.js          <span class="hljs-comment"># Product schema</span>
-│   ├── Cart.js             <span class="hljs-comment"># Cart schema</span>
-│   ├── Order.js            <span class="hljs-comment"># Order schema</span>
-│   └── Review.js           <span class="hljs-comment"># Review schema</span>
+├── models/                  # Database models
+│   ├── User.js             # User schema
+│   ├── Product.js          # Product schema
+│   ├── Cart.js             # Cart schema
+│   ├── Order.js            # Order schema
+│   └── Review.js           # Review schema
 │
-├── routes/                  <span class="hljs-comment"># API routes</span>
-│   ├── authRoutes.js       <span class="hljs-comment"># /api/auth</span>
-│   ├── productRoutes.js    <span class="hljs-comment"># /api/products</span>
-│   ├── cartRoutes.js       <span class="hljs-comment"># /api/cart</span>
-│   ├── orderRoutes.js      <span class="hljs-comment"># /api/orders</span>
-│   ├── reviewRoutes.js     <span class="hljs-comment"># /api/reviews</span>
-│   └── adminRoutes.js      <span class="hljs-comment"># /api/admin</span>
+├── routes/                  # API routes
+│   ├── authRoutes.js       # /api/auth
+│   ├── productRoutes.js    # /api/products
+│   ├── cartRoutes.js       # /api/cart
+│   ├── orderRoutes.js      # /api/orders
+│   ├── reviewRoutes.js     # /api/reviews
+│   └── adminRoutes.js      # /api/admin
 │
-├── utils/                   <span class="hljs-comment"># Utility functions</span>
-│   ├── validators.js       <span class="hljs-comment"># Custom validators</span>
-│   ├── helpers.js          <span class="hljs-comment"># Helper functions</span>
-│   └── seed.js             <span class="hljs-comment"># Database seeder</span>
+├── utils/                   # Utility functions
+│   ├── validators.js       # Custom validators
+│   ├── helpers.js          # Helper functions
+│   └── seed.js             # Database seeder
 │
-├── .<span class="hljs-keyword">env</span>                     <span class="hljs-comment"># Environment variables</span>
-├── .gitignore              <span class="hljs-comment"># Git ignore rules</span>
-├── package.json            <span class="hljs-comment"># Dependencies</span>
-└── server.js               <span class="hljs-comment"># Application entry point</span>
-</code></pre><h3 id="application-flow">Application Flow</h3>
+├── .env                     # Environment variables
+├── .gitignore              # Git ignore rules
+├── package.json            # Dependencies
+└── server.js               # Application entry point
+</code></pre>
+<h3>Application Flow</h3>
 <pre><code>Client Request
     ↓
 Express Server (server.js)
@@ -206,78 +200,79 @@ Security Middleware (Helmet, CORS, Rate Limit)
     ↓
 Body Parser
     ↓
-Route <span class="hljs-keyword">Handler</span> (routes/)
+Route Handler (routes/)
     ↓
-<span class="hljs-keyword">Authentication</span> Middleware (<span class="hljs-keyword">if</span> protected)
+Authentication Middleware (if protected)
     ↓
-<span class="hljs-keyword">Validation</span> Middleware
+Validation Middleware
     ↓
 Controller (business logic)
     ↓
-<span class="hljs-keyword">Database</span> <span class="hljs-keyword">Operations</span> (models/)
+Database Operations (models/)
     ↓
 Response Formation
     ↓
-<span class="hljs-keyword">Client</span> Response
-</code></pre><hr>
-<h2 id="-installation-guide">💻 Installation Guide</h2>
-<h3 id="step-1-system-requirements">Step 1: System Requirements</h3>
-<pre><code class="lang-bash"><span class="hljs-comment"># Check Node.js version</span>
-<span class="hljs-keyword">node</span> <span class="hljs-title">--version</span>  <span class="hljs-comment"># Should be v14+</span>
-
-<span class="hljs-comment"># Check npm version</span>
-npm --<span class="hljs-keyword">version</span>
-
-<span class="hljs-comment"># Check MongoDB</span>
-mongo --<span class="hljs-keyword">version</span>  <span class="hljs-comment"># Should be v5.0+</span>
+Client Response
 </code></pre>
-<h3 id="step-2-project-setup">Step 2: Project Setup</h3>
-<pre><code class="lang-bash"><span class="hljs-comment"># Create project directory</span>
+<hr>
+<h2>💻 Installation Guide</h2>
+<h3>Step 1: System Requirements</h3>
+<pre><code class="language-bash"># Check Node.js version
+node --version  # Should be v14+
+
+# Check npm version
+npm --version
+
+# Check MongoDB
+mongo --version  # Should be v5.0+
+</code></pre>
+<h3>Step 2: Project Setup</h3>
+<pre><code class="language-bash"># Create project directory
 mkdir ecommerce-api
 cd ecommerce-api
 
-<span class="hljs-comment"># Initialize npm project</span>
+# Initialize npm project
 npm init -y
 
-<span class="hljs-comment"># Install dependencies</span>
-npm <span class="hljs-keyword">install </span>express mongoose dotenv <span class="hljs-keyword">jsonwebtoken </span><span class="hljs-keyword">bcryptjs </span>stripe cors helmet morgan express-rate-limit <span class="hljs-keyword">joi
-</span>
-<span class="hljs-comment"># Install dev dependencies</span>
-npm <span class="hljs-keyword">install </span>--save-dev nodemon
+# Install dependencies
+npm install express mongoose dotenv jsonwebtoken bcryptjs stripe cors helmet morgan express-rate-limit joi
+
+# Install dev dependencies
+npm install --save-dev nodemon
 </code></pre>
-<h3 id="step-3-file-creation">Step 3: File Creation</h3>
+<h3>Step 3: File Creation</h3>
 <p>Create all files as per the project structure provided in the artifact.</p>
-<h3 id="step-4-environment-configuration">Step 4: Environment Configuration</h3>
+<h3>Step 4: Environment Configuration</h3>
 <p>Create <code>.env</code> file:</p>
-<pre><code class="lang-env"><span class="hljs-comment"># Server Configuration</span>
-<span class="hljs-attr">NODE_ENV</span>=development
-<span class="hljs-attr">PORT</span>=<span class="hljs-number">5000</span>
+<pre><code class="language-env"># Server Configuration
+NODE_ENV=development
+PORT=5000
 
-<span class="hljs-comment"># Database</span>
-<span class="hljs-attr">MONGO_URI</span>=mongodb://localhost:<span class="hljs-number">27017</span>/ecommerce
+# Database
+MONGO_URI=mongodb://localhost:27017/ecommerce
 
-<span class="hljs-comment"># JWT Configuration</span>
-<span class="hljs-attr">JWT_SECRET</span>=your_super_secret_jwt_key_min_32_characters_long
-<span class="hljs-attr">JWT_EXPIRE</span>=<span class="hljs-number">7</span>d
+# JWT Configuration
+JWT_SECRET=your_super_secret_jwt_key_min_32_characters_long
+JWT_EXPIRE=7d
 
-<span class="hljs-comment"># Stripe Configuration</span>
-<span class="hljs-attr">STRIPE_SECRET_KEY</span>=sk_test_51xxxxx
-<span class="hljs-attr">STRIPE_WEBHOOK_SECRET</span>=whsec_xxxxx
+# Stripe Configuration
+STRIPE_SECRET_KEY=sk_test_51xxxxx
+STRIPE_WEBHOOK_SECRET=whsec_xxxxx
 
-<span class="hljs-comment"># Rate Limiting</span>
-<span class="hljs-attr">RATE_LIMIT_WINDOW_MS</span>=<span class="hljs-number">900000</span>
-<span class="hljs-attr">RATE_LIMIT_MAX_REQUESTS</span>=<span class="hljs-number">100</span>
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
 
-<span class="hljs-comment"># CORS (optional)</span>
-<span class="hljs-attr">CLIENT_URL</span>=http://localhost:<span class="hljs-number">3000</span>
+# CORS (optional)
+CLIENT_URL=http://localhost:3000
 </code></pre>
-<h3 id="step-5-mongodb-setup">Step 5: MongoDB Setup</h3>
+<h3>Step 5: MongoDB Setup</h3>
 <p><strong>Option A: Local MongoDB</strong></p>
-<pre><code class="lang-bash"><span class="hljs-comment"># Start MongoDB service</span>
-sudo systemctl <span class="hljs-literal">start</span> mongod
+<pre><code class="language-bash"># Start MongoDB service
+sudo systemctl start mongod
 
-<span class="hljs-comment"># Or on macOS</span>
-brew services <span class="hljs-literal">start</span> mongodb-community
+# Or on macOS
+brew services start mongodb-community
 </code></pre>
 <p><strong>Option B: MongoDB Atlas (Cloud)</strong></p>
 <ol>
@@ -287,14 +282,14 @@ brew services <span class="hljs-literal">start</span> mongodb-community
 <li>Update MONGO_URI in .env</li>
 </ol>
 <p><strong>Option C: Docker</strong></p>
-<pre><code class="lang-bash">docker run -d \
-  -<span class="ruby">-name mongodb \
-</span>  -<span class="ruby">p <span class="hljs-number">27017</span><span class="hljs-symbol">:</span><span class="hljs-number">27017</span> \
-</span>  -<span class="ruby">e MONGO_INITDB_ROOT_USERNAME=admin \
-</span>  -<span class="ruby">e MONGO_INITDB_ROOT_PASSWORD=password \
-</span>  mongo:latest
+<pre><code class="language-bash">docker run -d \
+  --name mongodb \
+  -p 27017:27017 \
+  -e MONGO_INITDB_ROOT_USERNAME=admin \
+  -e MONGO_INITDB_ROOT_PASSWORD=password \
+  mongo:latest
 </code></pre>
-<h3 id="step-6-stripe-setup">Step 6: Stripe Setup</h3>
+<h3>Step 6: Stripe Setup</h3>
 <ol>
 <li>Create Stripe account at <a href="https://stripe.com">https://stripe.com</a></li>
 <li>Get API keys from Dashboard</li>
@@ -306,8 +301,8 @@ brew services <span class="hljs-literal">start</span> mongodb-community
 </li>
 </ol>
 <hr>
-<h2 id="-configuration">⚙️ Configuration</h2>
-<h3 id="environment-variables-explained">Environment Variables Explained</h3>
+<h2>⚙️ Configuration</h2>
+<h3>Environment Variables Explained</h3>
 <table>
 <thead>
 <tr>
@@ -317,8 +312,7 @@ brew services <span class="hljs-literal">start</span> mongodb-community
 <th>Required</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>NODE_ENV</code></td>
 <td>Environment mode</td>
 <td><code>development</code> / <code>production</code></td>
@@ -378,54 +372,53 @@ brew services <span class="hljs-literal">start</span> mongodb-community
 <td><code>http://localhost:3000</code></td>
 <td>Optional</td>
 </tr>
-</tbody>
-</table>
-<h3 id="security-configuration">Security Configuration</h3>
+</tbody></table>
+<h3>Security Configuration</h3>
 <p><strong>Helmet Configuration (server.js):</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-selector-tag">app</span><span class="hljs-selector-class">.use</span>(<span class="hljs-selector-tag">helmet</span>({
-  <span class="hljs-attribute">contentSecurityPolicy</span>: {
+<pre><code class="language-javascript">app.use(helmet({
+  contentSecurityPolicy: {
     directives: {
-      defaultSrc: [<span class="hljs-string">"'self'"</span>],
-      styleSrc: [<span class="hljs-string">"'self'"</span>, <span class="hljs-string">"'unsafe-inline'"</span>]
+      defaultSrc: [&quot;&#39;self&#39;&quot;],
+      styleSrc: [&quot;&#39;self&#39;&quot;, &quot;&#39;unsafe-inline&#39;&quot;]
     }
   }
 }));
 </code></pre>
 <p><strong>CORS Configuration:</strong></p>
-<pre><code class="lang-javascript">const corsOptions = {
-<span class="hljs-symbol">  origin:</span> process.env.CLIENT_URL || <span class="hljs-string">'*'</span>,
-<span class="hljs-symbol">  credentials:</span> true,
-<span class="hljs-symbol">  optionSuccessStatus:</span> <span class="hljs-number">200</span>
+<pre><code class="language-javascript">const corsOptions = {
+  origin: process.env.CLIENT_URL || &#39;*&#39;,
+  credentials: true,
+  optionSuccessStatus: 200
 };
 app.use(cors(corsOptions));
 </code></pre>
 <p><strong>Rate Limiting:</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> limiter = rateLimit({
-  windowMs: <span class="hljs-number">15</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>, <span class="hljs-comment">// 15 minutes</span>
-  <span class="hljs-built_in">max</span>: <span class="hljs-number">100</span>, <span class="hljs-comment">// limit each IP to 100 requests per windowMs</span>
-  message: <span class="hljs-string">'Too many requests from this IP'</span>
+<pre><code class="language-javascript">const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: &#39;Too many requests from this IP&#39;
 });
 </code></pre>
 <hr>
-<h2 id="-database-schema">🗄️ Database Schema</h2>
-<h3 id="user-model">User Model</h3>
-<pre><code class="lang-javascript">{
-<span class="hljs-symbol">  name:</span> String,           <span class="hljs-comment">// Required, max 50 chars</span>
-<span class="hljs-symbol">  email:</span> String,          <span class="hljs-comment">// Required, unique, validated</span>
-<span class="hljs-symbol">  password:</span> String,       <span class="hljs-comment">// Required, hashed, min 6 chars</span>
-<span class="hljs-symbol">  role:</span> String,           <span class="hljs-comment">// 'user' or 'admin', default: 'user'</span>
-<span class="hljs-symbol">  address:</span> {
-<span class="hljs-symbol">    street:</span> String,
-<span class="hljs-symbol">    city:</span> String,
-<span class="hljs-symbol">    state:</span> String,
-<span class="hljs-symbol">    zipCode:</span> String,
-<span class="hljs-symbol">    country:</span> String
+<h2>🗄️ Database Schema</h2>
+<h3>User Model</h3>
+<pre><code class="language-javascript">{
+  name: String,           // Required, max 50 chars
+  email: String,          // Required, unique, validated
+  password: String,       // Required, hashed, min 6 chars
+  role: String,           // &#39;user&#39; or &#39;admin&#39;, default: &#39;user&#39;
+  address: {
+    street: String,
+    city: String,
+    state: String,
+    zipCode: String,
+    country: String
   },
-<span class="hljs-symbol">  phone:</span> String,
-<span class="hljs-symbol">  resetPasswordToken:</span> String,
-<span class="hljs-symbol">  resetPasswordExpire:</span> Date,
-<span class="hljs-symbol">  createdAt:</span> Date,        <span class="hljs-comment">// Auto-generated</span>
-<span class="hljs-symbol">  updatedAt:</span> Date         <span class="hljs-comment">// Auto-generated</span>
+  phone: String,
+  resetPasswordToken: String,
+  resetPasswordExpire: Date,
+  createdAt: Date,        // Auto-generated
+  updatedAt: Date         // Auto-generated
 }
 </code></pre>
 <p><strong>Indexes:</strong></p>
@@ -436,21 +429,21 @@ app.use(cors(corsOptions));
 <ul>
 <li><code>matchPassword(enteredPassword)</code> - Compares passwords</li>
 </ul>
-<h3 id="product-model">Product Model</h3>
-<pre><code class="lang-javascript">{
-<span class="hljs-symbol">  name:</span> String,           <span class="hljs-comment">// Required, max 100 chars</span>
-<span class="hljs-symbol">  description:</span> String,    <span class="hljs-comment">// Required, max 2000 chars</span>
-<span class="hljs-symbol">  price:</span> Number,          <span class="hljs-comment">// Required, min 0</span>
-<span class="hljs-symbol">  category:</span> String,       <span class="hljs-comment">// Required, enum values</span>
-<span class="hljs-symbol">  stock:</span> Number,          <span class="hljs-comment">// Required, min 0, default 0</span>
-<span class="hljs-symbol">  images:</span> [String],       <span class="hljs-comment">// Array of image URLs</span>
-<span class="hljs-symbol">  rating:</span> Number,         <span class="hljs-comment">// 0-5, default 0</span>
-<span class="hljs-symbol">  numReviews:</span> Number,     <span class="hljs-comment">// Default 0</span>
-<span class="hljs-symbol">  featured:</span> Boolean,      <span class="hljs-comment">// Default false</span>
-<span class="hljs-symbol">  brand:</span> String,
-<span class="hljs-symbol">  sku:</span> String,
-<span class="hljs-symbol">  createdAt:</span> Date,
-<span class="hljs-symbol">  updatedAt:</span> Date
+<h3>Product Model</h3>
+<pre><code class="language-javascript">{
+  name: String,           // Required, max 100 chars
+  description: String,    // Required, max 2000 chars
+  price: Number,          // Required, min 0
+  category: String,       // Required, enum values
+  stock: Number,          // Required, min 0, default 0
+  images: [String],       // Array of image URLs
+  rating: Number,         // 0-5, default 0
+  numReviews: Number,     // Default 0
+  featured: Boolean,      // Default false
+  brand: String,
+  sku: String,
+  createdAt: Date,
+  updatedAt: Date
 }
 </code></pre>
 <p><strong>Categories:</strong></p>
@@ -470,60 +463,60 @@ app.use(cors(corsOptions));
 <ul>
 <li><code>reviews</code> - Populated reviews for the product</li>
 </ul>
-<h3 id="cart-model">Cart Model</h3>
-<pre><code class="lang-javascript">{
-<span class="hljs-symbol">  user:</span> ObjectId,         <span class="hljs-comment">// Required, unique, ref: 'User'</span>
-<span class="hljs-symbol">  items:</span> [
+<h3>Cart Model</h3>
+<pre><code class="language-javascript">{
+  user: ObjectId,         // Required, unique, ref: &#39;User&#39;
+  items: [
     {
-<span class="hljs-symbol">      product:</span> ObjectId,  <span class="hljs-comment">// Required, ref: 'Product'</span>
-<span class="hljs-symbol">      quantity:</span> Number    <span class="hljs-comment">// Required, min 1, default 1</span>
+      product: ObjectId,  // Required, ref: &#39;Product&#39;
+      quantity: Number    // Required, min 1, default 1
     }
   ],
-<span class="hljs-symbol">  totalAmount:</span> Number,    <span class="hljs-comment">// Default 0, calculated</span>
-<span class="hljs-symbol">  createdAt:</span> Date,
-<span class="hljs-symbol">  updatedAt:</span> Date
+  totalAmount: Number,    // Default 0, calculated
+  createdAt: Date,
+  updatedAt: Date
 }
 </code></pre>
 <p><strong>Methods:</strong></p>
 <ul>
 <li><code>calculateTotal()</code> - Calculates and updates total amount</li>
 </ul>
-<h3 id="order-model">Order Model</h3>
-<pre><code class="lang-javascript">{
-<span class="hljs-symbol">  user:</span> ObjectId,         <span class="hljs-comment">// Required, ref: 'User'</span>
-<span class="hljs-symbol">  items:</span> [
+<h3>Order Model</h3>
+<pre><code class="language-javascript">{
+  user: ObjectId,         // Required, ref: &#39;User&#39;
+  items: [
     {
-<span class="hljs-symbol">      product:</span> ObjectId,  <span class="hljs-comment">// Required, ref: 'Product'</span>
-<span class="hljs-symbol">      name:</span> String,       <span class="hljs-comment">// Product snapshot</span>
-<span class="hljs-symbol">      quantity:</span> Number,   <span class="hljs-comment">// Required, min 1</span>
-<span class="hljs-symbol">      price:</span> Number       <span class="hljs-comment">// Required, snapshot</span>
+      product: ObjectId,  // Required, ref: &#39;Product&#39;
+      name: String,       // Product snapshot
+      quantity: Number,   // Required, min 1
+      price: Number       // Required, snapshot
     }
   ],
-<span class="hljs-symbol">  shippingAddress:</span> {
-<span class="hljs-symbol">    street:</span> String,       <span class="hljs-comment">// Required</span>
-<span class="hljs-symbol">    city:</span> String,         <span class="hljs-comment">// Required</span>
-<span class="hljs-symbol">    state:</span> String,        <span class="hljs-comment">// Required</span>
-<span class="hljs-symbol">    zipCode:</span> String,      <span class="hljs-comment">// Required</span>
-<span class="hljs-symbol">    country:</span> String       <span class="hljs-comment">// Required</span>
+  shippingAddress: {
+    street: String,       // Required
+    city: String,         // Required
+    state: String,        // Required
+    zipCode: String,      // Required
+    country: String       // Required
   },
-<span class="hljs-symbol">  paymentMethod:</span> String,  <span class="hljs-comment">// Required, default 'stripe'</span>
-<span class="hljs-symbol">  paymentResult:</span> {
-<span class="hljs-symbol">    id:</span> String,           <span class="hljs-comment">// Payment intent ID</span>
-<span class="hljs-symbol">    status:</span> String,       <span class="hljs-comment">// Payment status</span>
-<span class="hljs-symbol">    update_time:</span> String,
-<span class="hljs-symbol">    email_address:</span> String
+  paymentMethod: String,  // Required, default &#39;stripe&#39;
+  paymentResult: {
+    id: String,           // Payment intent ID
+    status: String,       // Payment status
+    update_time: String,
+    email_address: String
   },
-<span class="hljs-symbol">  itemsPrice:</span> Number,     <span class="hljs-comment">// Required, default 0</span>
-<span class="hljs-symbol">  taxPrice:</span> Number,       <span class="hljs-comment">// Required, default 0</span>
-<span class="hljs-symbol">  shippingPrice:</span> Number,  <span class="hljs-comment">// Required, default 0</span>
-<span class="hljs-symbol">  totalPrice:</span> Number,     <span class="hljs-comment">// Required, default 0</span>
-<span class="hljs-symbol">  isPaid:</span> Boolean,        <span class="hljs-comment">// Default false</span>
-<span class="hljs-symbol">  paidAt:</span> Date,
-<span class="hljs-symbol">  isDelivered:</span> Boolean,   <span class="hljs-comment">// Default false</span>
-<span class="hljs-symbol">  deliveredAt:</span> Date,
-<span class="hljs-symbol">  status:</span> String,         <span class="hljs-comment">// Enum, default 'Pending'</span>
-<span class="hljs-symbol">  createdAt:</span> Date,
-<span class="hljs-symbol">  updatedAt:</span> Date
+  itemsPrice: Number,     // Required, default 0
+  taxPrice: Number,       // Required, default 0
+  shippingPrice: Number,  // Required, default 0
+  totalPrice: Number,     // Required, default 0
+  isPaid: Boolean,        // Default false
+  paidAt: Date,
+  isDelivered: Boolean,   // Default false
+  deliveredAt: Date,
+  status: String,         // Enum, default &#39;Pending&#39;
+  createdAt: Date,
+  updatedAt: Date
 }
 </code></pre>
 <p><strong>Status Values:</strong></p>
@@ -534,14 +527,14 @@ app.use(cors(corsOptions));
 <li>Delivered</li>
 <li>Cancelled</li>
 </ul>
-<h3 id="review-model">Review Model</h3>
-<pre><code class="lang-javascript">{
-<span class="hljs-symbol">  product:</span> ObjectId,      <span class="hljs-comment">// Required, ref: 'Product'</span>
-<span class="hljs-symbol">  user:</span> ObjectId,         <span class="hljs-comment">// Required, ref: 'User'</span>
-<span class="hljs-symbol">  rating:</span> Number,         <span class="hljs-comment">// Required, 1-5</span>
-<span class="hljs-symbol">  comment:</span> String,        <span class="hljs-comment">// Required, max 500 chars</span>
-<span class="hljs-symbol">  createdAt:</span> Date,
-<span class="hljs-symbol">  updatedAt:</span> Date
+<h3>Review Model</h3>
+<pre><code class="language-javascript">{
+  product: ObjectId,      // Required, ref: &#39;Product&#39;
+  user: ObjectId,         // Required, ref: &#39;User&#39;
+  rating: Number,         // Required, 1-5
+  comment: String,        // Required, max 500 chars
+  createdAt: Date,
+  updatedAt: Date
 }
 </code></pre>
 <p><strong>Indexes:</strong></p>
@@ -553,34 +546,34 @@ app.use(cors(corsOptions));
 <li><code>calculateAverageRating(productId)</code> - Updates product rating</li>
 </ul>
 <hr>
-<h2 id="-api-reference">📚 API Reference</h2>
-<h3 id="response-format">Response Format</h3>
+<h2>📚 API Reference</h2>
+<h3>Response Format</h3>
 <p>All API responses follow this structure:</p>
 <p><strong>Success Response:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-string">"data"</span>: { <span class="hljs-params">...</span> },
-  <span class="hljs-string">"count"</span>: <span class="hljs-number">10</span>,      <span class="hljs-comment">// For list endpoints</span>
-  <span class="hljs-string">"page"</span>: <span class="hljs-number">1</span>,        <span class="hljs-comment">// For paginated endpoints</span>
-  <span class="hljs-string">"pages"</span>: <span class="hljs-number">5</span>        <span class="hljs-comment">// For paginated endpoints</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: { ... },
+  &quot;count&quot;: 10,      // For list endpoints
+  &quot;page&quot;: 1,        // For paginated endpoints
+  &quot;pages&quot;: 5        // For paginated endpoints
 }
 </code></pre>
 <p><strong>Error Response:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Error description"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Error description&quot;
 }
 </code></pre>
 <hr>
-<h2 id="-authentication-authorization">🔐 Authentication &amp; Authorization</h2>
-<h3 id="1-user-registration">1. User Registration</h3>
+<h2>🔐 Authentication &amp; Authorization</h2>
+<h3>1. User Registration</h3>
 <p><strong>Endpoint:</strong> <code>POST /api/auth/register</code></p>
 <p><strong>Description:</strong> Register a new user account</p>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>,
-  <span class="hljs-attr">"password"</span>: <span class="hljs-string">"password123"</span>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;John Doe&quot;,
+  &quot;email&quot;: &quot;john@example.com&quot;,
+  &quot;password&quot;: &quot;password123&quot;
 }
 </code></pre>
 <p><strong>Validation Rules:</strong></p>
@@ -590,14 +583,14 @@ app.use(cors(corsOptions));
 <li><code>password</code>: Required, minimum 6 characters</li>
 </ul>
 <p><strong>Success Response (201):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>,
-    <span class="hljs-attr">"role"</span>: <span class="hljs-string">"user"</span>,
-    <span class="hljs-attr">"token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;role&quot;: &quot;user&quot;,
+    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;
   }
 }
 </code></pre>
@@ -607,33 +600,33 @@ app.use(cors(corsOptions));
 <li><code>500</code> - Server error</li>
 </ul>
 <p><strong>Example cURL:</strong></p>
-<pre><code class="lang-bash">curl -X POST http:<span class="hljs-comment">//localhost:5000/api/auth/register \</span>
-  -H <span class="hljs-string">"Content-Type: application/json"</span> \
-  -d <span class="hljs-string">'{
-    "</span>name<span class="hljs-string">": "</span>John Doe<span class="hljs-string">",
-    "</span>email<span class="hljs-string">": "</span>john@example.com<span class="hljs-string">",
-    "</span>password<span class="hljs-string">": "</span>password123<span class="hljs-string">"
-  }'</span>
+<pre><code class="language-bash">curl -X POST http://localhost:5000/api/auth/register \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;password&quot;: &quot;password123&quot;
+  }&#39;
 </code></pre>
 <hr>
-<h3 id="2-user-login">2. User Login</h3>
+<h3>2. User Login</h3>
 <p><strong>Endpoint:</strong> <code>POST /api/auth/login</code></p>
 <p><strong>Description:</strong> Authenticate user and receive JWT token</p>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>,
-  <span class="hljs-attr">"password"</span>: <span class="hljs-string">"password123"</span>
+<pre><code class="language-json">{
+  &quot;email&quot;: &quot;john@example.com&quot;,
+  &quot;password&quot;: &quot;password123&quot;
 }
 </code></pre>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>,
-    <span class="hljs-attr">"role"</span>: <span class="hljs-string">"user"</span>,
-    <span class="hljs-attr">"token"</span>: <span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;role&quot;: &quot;user&quot;,
+    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;
   }
 }
 </code></pre>
@@ -645,32 +638,34 @@ app.use(cors(corsOptions));
 </ul>
 <p><strong>Token Usage:</strong>
 Store the token and include it in subsequent requests:</p>
-<pre><code><span class="hljs-symbol">Authorization</span>: <span class="hljs-keyword">Bearer </span>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-</code></pre><hr>
-<h3 id="3-get-user-profile">3. Get User Profile</h3>
+<pre><code>Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre>
+<hr>
+<h3>3. Get User Profile</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/auth/profile</code></p>
 <p><strong>Authentication:</strong> Required (Bearer Token)</p>
 <p><strong>Description:</strong> Get logged-in user&#39;s profile information</p>
 <p><strong>Headers:</strong></p>
-<pre><code><span class="hljs-symbol">Authorization:</span> Bearer <span class="hljs-params">&lt;your_token&gt;</span>
-</code></pre><p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>,
-    <span class="hljs-attr">"role"</span>: <span class="hljs-string">"user"</span>,
-    <span class="hljs-attr">"address"</span>: {
-      <span class="hljs-attr">"street"</span>: <span class="hljs-string">"123 Main St"</span>,
-      <span class="hljs-attr">"city"</span>: <span class="hljs-string">"New York"</span>,
-      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"NY"</span>,
-      <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"10001"</span>,
-      <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>
+<pre><code>Authorization: Bearer &lt;your_token&gt;
+</code></pre>
+<p><strong>Success Response (200):</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;name&quot;: &quot;John Doe&quot;,
+    &quot;email&quot;: &quot;john@example.com&quot;,
+    &quot;role&quot;: &quot;user&quot;,
+    &quot;address&quot;: {
+      &quot;street&quot;: &quot;123 Main St&quot;,
+      &quot;city&quot;: &quot;New York&quot;,
+      &quot;state&quot;: &quot;NY&quot;,
+      &quot;zipCode&quot;: &quot;10001&quot;,
+      &quot;country&quot;: &quot;USA&quot;
     },
-    <span class="hljs-attr">"phone"</span>: <span class="hljs-string">"+1234567890"</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-15T10:30:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-20T14:22:00.000Z"</span>
+    &quot;phone&quot;: &quot;+1234567890&quot;,
+    &quot;createdAt&quot;: &quot;2024-01-15T10:30:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-20T14:22:00.000Z&quot;
   }
 }
 </code></pre>
@@ -681,98 +676,137 @@ Store the token and include it in subsequent requests:</p>
 <li><code>500</code> - Server error</li>
 </ul>
 <hr>
-<h3 id="4-update-user-profile">4. Update User Profile</h3>
+<h3>4. Update User Profile</h3>
 <p><strong>Endpoint:</strong> <code>PUT /api/auth/profile</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Update user profile information</p>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Updated"</span>,
-  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"johnupdated@example.com"</span>,
-  <span class="hljs-attr">"phone"</span>: <span class="hljs-string">"+1234567890"</span>,
-  <span class="hljs-attr">"address"</span>: {
-    <span class="hljs-attr">"street"</span>: <span class="hljs-string">"456 Oak Avenue"</span>,
-    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Los Angeles"</span>,
-    <span class="hljs-attr">"state"</span>: <span class="hljs-string">"CA"</span>,
-    <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"90001"</span>,
-    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;John Updated&quot;,
+  &quot;email&quot;: &quot;johnupdated@example.com&quot;,
+  &quot;phone&quot;: &quot;+1234567890&quot;,
+  &quot;address&quot;: {
+    &quot;street&quot;: &quot;456 Oak Avenue&quot;,
+    &quot;city&quot;: &quot;Los Angeles&quot;,
+    &quot;state&quot;: &quot;CA&quot;,
+    &quot;zipCode&quot;: &quot;90001&quot;,
+    &quot;country&quot;: &quot;USA&quot;
   }
 }
 </code></pre>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Updated"</span>,
-    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"johnupdated@example.com"</span>,
-    <span class="hljs-attr">"phone"</span>: <span class="hljs-string">"+1234567890"</span>,
-    <span class="hljs-attr">"address"</span>: {
-      <span class="hljs-attr">"street"</span>: <span class="hljs-string">"456 Oak Avenue"</span>,
-      <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Los Angeles"</span>,
-      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"CA"</span>,
-      <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"90001"</span>,
-      <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;name&quot;: &quot;John Updated&quot;,
+    &quot;email&quot;: &quot;johnupdated@example.com&quot;,
+    &quot;phone&quot;: &quot;+1234567890&quot;,
+    &quot;address&quot;: {
+      &quot;street&quot;: &quot;456 Oak Avenue&quot;,
+      &quot;city&quot;: &quot;Los Angeles&quot;,
+      &quot;state&quot;: &quot;CA&quot;,
+      &quot;zipCode&quot;: &quot;90001&quot;,
+      &quot;country&quot;: &quot;USA&quot;
     }
   }
 }
 </code></pre>
 <hr>
-<h2 id="-product-management">🛍️ Product Management</h2>
-<h3 id="5-get-all-products">5. Get All Products</h3>
+<h2>🛍️ Product Management</h2>
+<h3>5. Get All Products</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/products</code></p>
 <p><strong>Authentication:</strong> Not Required</p>
 <p><strong>Description:</strong> Get paginated list of products with filtering and search</p>
-<p><strong>Query Parameters:</strong>
-| Parameter | Type | Description | Example |
-|-----------|------|-------------|---------|
-| <code>page</code> | Number | Page number (default: 1) | <code>?page=2</code> |
-| <code>limit</code> | Number | Items per page (default: 10) | <code>?limit=20</code> |
-| <code>category</code> | String | Filter by category | <code>?category=Electronics</code> |
-| <code>search</code> | String | Search in name/description | <code>?search=wireless</code> |
-| <code>minPrice</code> | Number | Minimum price filter | <code>?minPrice=50</code> |
-| <code>maxPrice</code> | Number | Maximum price filter | <code>?maxPrice=500</code> |</p>
+<p><strong>Query Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>page</code></td>
+<td>Number</td>
+<td>Page number (default: 1)</td>
+<td><code>?page=2</code></td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td>Number</td>
+<td>Items per page (default: 10)</td>
+<td><code>?limit=20</code></td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>String</td>
+<td>Filter by category</td>
+<td><code>?category=Electronics</code></td>
+</tr>
+<tr>
+<td><code>search</code></td>
+<td>String</td>
+<td>Search in name/description</td>
+<td><code>?search=wireless</code></td>
+</tr>
+<tr>
+<td><code>minPrice</code></td>
+<td>Number</td>
+<td>Minimum price filter</td>
+<td><code>?minPrice=50</code></td>
+</tr>
+<tr>
+<td><code>maxPrice</code></td>
+<td>Number</td>
+<td>Maximum price filter</td>
+<td><code>?maxPrice=500</code></td>
+</tr>
+</tbody></table>
 <p><strong>Example Request:</strong></p>
-<pre><code>GET /api/products?page=<span class="hljs-number">1</span>&amp;limit=<span class="hljs-number">10</span>&amp;category=Electronics&amp;minPrice=<span class="hljs-number">100</span>&amp;maxPrice=<span class="hljs-number">500</span>
-</code></pre><p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"count"</span>: <span class="hljs-number">10</span>,
-  <span class="hljs-attr">"total"</span>: <span class="hljs-number">45</span>,
-  <span class="hljs-attr">"page"</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">"pages"</span>: <span class="hljs-number">5</span>,
-  <span class="hljs-attr">"data"</span>: [
+<pre><code>GET /api/products?page=1&amp;limit=10&amp;category=Electronics&amp;minPrice=100&amp;maxPrice=500
+</code></pre>
+<p><strong>Success Response (200):</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 10,
+  &quot;total&quot;: 45,
+  &quot;page&quot;: 1,
+  &quot;pages&quot;: 5,
+  &quot;data&quot;: [
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"High-quality wireless headphones..."</span>,
-      <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>,
-      <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Electronics"</span>,
-      <span class="hljs-attr">"stock"</span>: <span class="hljs-number">50</span>,
-      <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/image1.jpg"</span>],
-      <span class="hljs-attr">"rating"</span>: <span class="hljs-number">4.5</span>,
-      <span class="hljs-attr">"numReviews"</span>: <span class="hljs-number">23</span>,
-      <span class="hljs-attr">"featured"</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"AudioTech"</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-10T08:00:00.000Z"</span>,
-      <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-20T10:30:00.000Z"</span>
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+      &quot;name&quot;: &quot;Wireless Headphones&quot;,
+      &quot;description&quot;: &quot;High-quality wireless headphones...&quot;,
+      &quot;price&quot;: 199.99,
+      &quot;category&quot;: &quot;Electronics&quot;,
+      &quot;stock&quot;: 50,
+      &quot;images&quot;: [&quot;https://example.com/image1.jpg&quot;],
+      &quot;rating&quot;: 4.5,
+      &quot;numReviews&quot;: 23,
+      &quot;featured&quot;: true,
+      &quot;brand&quot;: &quot;AudioTech&quot;,
+      &quot;createdAt&quot;: &quot;2024-01-10T08:00:00.000Z&quot;,
+      &quot;updatedAt&quot;: &quot;2024-01-20T10:30:00.000Z&quot;
     }
     // ... more products
   ]
 }
 </code></pre>
 <p><strong>Filter Combinations:</strong></p>
-<pre><code class="lang-bash"><span class="hljs-meta"># Electronics under $300</span>
-GET <span class="hljs-meta-keyword">/api/</span>products?category=Electronics&amp;maxPrice=<span class="hljs-number">300</span>
+<pre><code class="language-bash"># Electronics under $300
+GET /api/products?category=Electronics&amp;maxPrice=300
 
-<span class="hljs-meta"># Search for <span class="hljs-string">"shoes"</span> in Sports category</span>
-GET <span class="hljs-meta-keyword">/api/</span>products?category=Sports<span class="hljs-variable">&amp;search</span>=shoes
+# Search for &quot;shoes&quot; in Sports category
+GET /api/products?category=Sports&amp;search=shoes
 
-<span class="hljs-meta"># Page 2 with 20 items</span>
-GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-number">2</span><span class="hljs-variable">&amp;limit</span>=<span class="hljs-number">20</span>
+# Page 2 with 20 items
+GET /api/products?page=2&amp;limit=20
 </code></pre>
 <hr>
-<h3 id="6-get-single-product">6. Get Single Product</h3>
+<h3>6. Get Single Product</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/products/:id</code></p>
 <p><strong>Authentication:</strong> Not Required</p>
 <p><strong>Description:</strong> Get detailed information about a specific product including reviews</p>
@@ -781,38 +815,38 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Product ID (MongoDB ObjectId)</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"High-quality wireless headphones with active noise cancellation..."</span>,
-    <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>,
-    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Electronics"</span>,
-    <span class="hljs-attr">"stock"</span>: <span class="hljs-number">50</span>,
-    <span class="hljs-attr">"images"</span>: [
-      <span class="hljs-string">"https://example.com/image1.jpg"</span>,
-      <span class="hljs-string">"https://example.com/image2.jpg"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+    &quot;name&quot;: &quot;Wireless Headphones&quot;,
+    &quot;description&quot;: &quot;High-quality wireless headphones with active noise cancellation...&quot;,
+    &quot;price&quot;: 199.99,
+    &quot;category&quot;: &quot;Electronics&quot;,
+    &quot;stock&quot;: 50,
+    &quot;images&quot;: [
+      &quot;https://example.com/image1.jpg&quot;,
+      &quot;https://example.com/image2.jpg&quot;
     ],
-    <span class="hljs-attr">"rating"</span>: <span class="hljs-number">4.5</span>,
-    <span class="hljs-attr">"numReviews"</span>: <span class="hljs-number">23</span>,
-    <span class="hljs-attr">"featured"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"AudioTech"</span>,
-    <span class="hljs-attr">"sku"</span>: <span class="hljs-string">"AUD-WH-001"</span>,
-    <span class="hljs-attr">"reviews"</span>: [
+    &quot;rating&quot;: 4.5,
+    &quot;numReviews&quot;: 23,
+    &quot;featured&quot;: true,
+    &quot;brand&quot;: &quot;AudioTech&quot;,
+    &quot;sku&quot;: &quot;AUD-WH-001&quot;,
+    &quot;reviews&quot;: [
       {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f789012"</span>,
-        <span class="hljs-attr">"user"</span>: {
-          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f789012&quot;,
+        &quot;user&quot;: {
+          &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+          &quot;name&quot;: &quot;John Doe&quot;
         },
-        <span class="hljs-attr">"rating"</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Excellent sound quality!"</span>,
-        <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-15T14:30:00.000Z"</span>
+        &quot;rating&quot;: 5,
+        &quot;comment&quot;: &quot;Excellent sound quality!&quot;,
+        &quot;createdAt&quot;: &quot;2024-01-15T14:30:00.000Z&quot;
       }
     ],
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-10T08:00:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-20T10:30:00.000Z"</span>
+    &quot;createdAt&quot;: &quot;2024-01-10T08:00:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-20T10:30:00.000Z&quot;
   }
 }
 </code></pre>
@@ -822,98 +856,98 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>500</code> - Server error</li>
 </ul>
 <hr>
-<h3 id="7-get-featured-products">7. Get Featured Products</h3>
+<h3>7. Get Featured Products</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/products/featured</code></p>
 <p><strong>Authentication:</strong> Not Required</p>
 <p><strong>Description:</strong> Get up to 6 featured products for homepage display</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"count"</span>: <span class="hljs-number">6</span>,
-  <span class="hljs-attr">"data"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 6,
+  &quot;data&quot;: [
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-      <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>,
-      <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/image1.jpg"</span>],
-      <span class="hljs-attr">"rating"</span>: <span class="hljs-number">4.5</span>,
-      <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Electronics"</span>
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+      &quot;name&quot;: &quot;Wireless Headphones&quot;,
+      &quot;price&quot;: 199.99,
+      &quot;images&quot;: [&quot;https://example.com/image1.jpg&quot;],
+      &quot;rating&quot;: 4.5,
+      &quot;category&quot;: &quot;Electronics&quot;
     }
-    // ... up to <span class="hljs-number">6</span> products
+    // ... up to 6 products
   ]
 }
 </code></pre>
 <hr>
-<h2 id="-shopping-cart">🛒 Shopping Cart</h2>
-<h3 id="8-get-user-cart">8. Get User Cart</h3>
+<h2>🛒 Shopping Cart</h2>
+<h3>8. Get User Cart</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/cart</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Get current user&#39;s shopping cart with all items</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f999999"</span>,
-    <span class="hljs-attr">"user"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"items"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f999999&quot;,
+    &quot;user&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;items&quot;: [
       {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f888888"</span>,
-        <span class="hljs-attr">"product"</span>: {
-          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>,
-          <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/image1.jpg"</span>],
-          <span class="hljs-attr">"stock"</span>: <span class="hljs-number">50</span>
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f888888&quot;,
+        &quot;product&quot;: {
+          &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+          &quot;name&quot;: &quot;Wireless Headphones&quot;,
+          &quot;price&quot;: 199.99,
+          &quot;images&quot;: [&quot;https://example.com/image1.jpg&quot;],
+          &quot;stock&quot;: 50
         },
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>
+        &quot;quantity&quot;: 2
       },
       {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f777777"</span>,
-        <span class="hljs-attr">"product"</span>: {
-          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654322"</span>,
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Smart Watch"</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">299.99</span>,
-          <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/watch.jpg"</span>],
-          <span class="hljs-attr">"stock"</span>: <span class="hljs-number">30</span>
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f777777&quot;,
+        &quot;product&quot;: {
+          &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654322&quot;,
+          &quot;name&quot;: &quot;Smart Watch&quot;,
+          &quot;price&quot;: 299.99,
+          &quot;images&quot;: [&quot;https://example.com/watch.jpg&quot;],
+          &quot;stock&quot;: 30
         },
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">1</span>
+        &quot;quantity&quot;: 1
       }
     ],
-    <span class="hljs-attr">"totalAmount"</span>: <span class="hljs-number">699.97</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-20T10:00:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-20T14:30:00.000Z"</span>
+    &quot;totalAmount&quot;: 699.97,
+    &quot;createdAt&quot;: &quot;2024-01-20T10:00:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-20T14:30:00.000Z&quot;
   }
 }
 </code></pre>
 <p><strong>Note:</strong> If user has no cart, an empty cart is automatically created.</p>
 <hr>
-<h3 id="9-add-to-cart">9. Add to Cart</h3>
+<h3>9. Add to Cart</h3>
 <p><strong>Endpoint:</strong> <code>POST /api/cart</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Add a product to the shopping cart or increase quantity if already exists</p>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"productId"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-  <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>
+<pre><code class="language-json">{
+  &quot;productId&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+  &quot;quantity&quot;: 2
 }
 </code></pre>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f999999"</span>,
-    <span class="hljs-attr">"user"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"items"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f999999&quot;,
+    &quot;user&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;items&quot;: [
       {
-        <span class="hljs-attr">"product"</span>: {
-          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+        &quot;product&quot;: {
+          &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+          &quot;name&quot;: &quot;Wireless Headphones&quot;,
+          &quot;price&quot;: 199.99
         },
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>
+        &quot;quantity&quot;: 2
       }
     ],
-    <span class="hljs-attr">"totalAmount"</span>: <span class="hljs-number">399.98</span>
+    &quot;totalAmount&quot;: 399.98
   }
 }
 </code></pre>
@@ -931,7 +965,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li>Total amount is recalculated automatically</li>
 </ul>
 <hr>
-<h3 id="10-update-cart-item">10. Update Cart Item</h3>
+<h3>10. Update Cart Item</h3>
 <p><strong>Endpoint:</strong> <code>PUT /api/cart/:productId</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Update quantity of a specific item in cart</p>
@@ -940,26 +974,26 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>productId</code> - Product ID to update</li>
 </ul>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">5</span>
+<pre><code class="language-json">{
+  &quot;quantity&quot;: 5
 }
 </code></pre>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f999999"</span>,
-    <span class="hljs-attr">"items"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f999999&quot;,
+    &quot;items&quot;: [
       {
-        <span class="hljs-attr">"product"</span>: {
-          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+        &quot;product&quot;: {
+          &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+          &quot;name&quot;: &quot;Wireless Headphones&quot;,
+          &quot;price&quot;: 199.99
         },
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">5</span>
+        &quot;quantity&quot;: 5
       }
     ],
-    <span class="hljs-attr">"totalAmount"</span>: <span class="hljs-number">999.95</span>
+    &quot;totalAmount&quot;: 999.95
   }
 }
 </code></pre>
@@ -974,7 +1008,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>401</code> - Unauthorized</li>
 </ul>
 <hr>
-<h3 id="11-remove-from-cart">11. Remove from Cart</h3>
+<h3>11. Remove from Cart</h3>
 <p><strong>Endpoint:</strong> <code>DELETE /api/cart/:productId</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Remove a specific product from the cart</p>
@@ -983,49 +1017,49 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>productId</code> - Product ID to remove</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f999999"</span>,
-    <span class="hljs-attr">"items"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f999999&quot;,
+    &quot;items&quot;: [
       // remaining items
     ],
-    <span class="hljs-attr">"totalAmount"</span>: <span class="hljs-number">299.99</span>
+    &quot;totalAmount&quot;: 299.99
   }
 }
 </code></pre>
 <hr>
-<h3 id="12-clear-cart">12. Clear Cart</h3>
+<h3>12. Clear Cart</h3>
 <p><strong>Endpoint:</strong> <code>DELETE /api/cart</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Remove all items from the cart</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f999999"</span>,
-    <span class="hljs-attr">"user"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"items"</span>: [],
-    <span class="hljs-attr">"totalAmount"</span>: <span class="hljs-number">0</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f999999&quot;,
+    &quot;user&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;items&quot;: [],
+    &quot;totalAmount&quot;: 0
   }
 }
 </code></pre>
 <hr>
-<h2 id="-order-management">📦 Order Management</h2>
-<h3 id="13-create-order">13. Create Order</h3>
+<h2>📦 Order Management</h2>
+<h3>13. Create Order</h3>
 <p><strong>Endpoint:</strong> <code>POST /api/orders</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Create a new order from cart items with payment processing</p>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"shippingAddress"</span>: {
-    <span class="hljs-attr">"street"</span>: <span class="hljs-string">"123 Main Street"</span>,
-    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"New York"</span>,
-    <span class="hljs-attr">"state"</span>: <span class="hljs-string">"NY"</span>,
-    <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"10001"</span>,
-    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>
+<pre><code class="language-json">{
+  &quot;shippingAddress&quot;: {
+    &quot;street&quot;: &quot;123 Main Street&quot;,
+    &quot;city&quot;: &quot;New York&quot;,
+    &quot;state&quot;: &quot;NY&quot;,
+    &quot;zipCode&quot;: &quot;10001&quot;,
+    &quot;country&quot;: &quot;USA&quot;
   },
-  <span class="hljs-attr">"paymentMethodId"</span>: <span class="hljs-string">"pm_card_visa"</span>
+  &quot;paymentMethodId&quot;: &quot;pm_card_visa&quot;
 }
 </code></pre>
 <p><strong>Payment Method IDs (Stripe Test Cards):</strong></p>
@@ -1035,40 +1069,40 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li>Test card number: <code>4242 4242 4242 4242</code></li>
 </ul>
 <p><strong>Success Response (201):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-    <span class="hljs-attr">"user"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-    <span class="hljs-attr">"items"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+    &quot;user&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+    &quot;items&quot;: [
       {
-        <span class="hljs-attr">"product"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+        &quot;product&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+        &quot;name&quot;: &quot;Wireless Headphones&quot;,
+        &quot;quantity&quot;: 2,
+        &quot;price&quot;: 199.99
       }
     ],
-    <span class="hljs-attr">"shippingAddress"</span>: {
-      <span class="hljs-attr">"street"</span>: <span class="hljs-string">"123 Main Street"</span>,
-      <span class="hljs-attr">"city"</span>: <span class="hljs-string">"New York"</span>,
-      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"NY"</span>,
-      <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"10001"</span>,
-      <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>
+    &quot;shippingAddress&quot;: {
+      &quot;street&quot;: &quot;123 Main Street&quot;,
+      &quot;city&quot;: &quot;New York&quot;,
+      &quot;state&quot;: &quot;NY&quot;,
+      &quot;zipCode&quot;: &quot;10001&quot;,
+      &quot;country&quot;: &quot;USA&quot;
     },
-    <span class="hljs-attr">"paymentMethod"</span>: <span class="hljs-string">"stripe"</span>,
-    <span class="hljs-attr">"paymentResult"</span>: {
-      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"pi_1234567890"</span>,
-      <span class="hljs-attr">"status"</span>: <span class="hljs-string">"succeeded"</span>,
-      <span class="hljs-attr">"update_time"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>
+    &quot;paymentMethod&quot;: &quot;stripe&quot;,
+    &quot;paymentResult&quot;: {
+      &quot;id&quot;: &quot;pi_1234567890&quot;,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;update_time&quot;: &quot;2024-01-20T15:30:00.000Z&quot;
     },
-    <span class="hljs-attr">"itemsPrice"</span>: <span class="hljs-number">399.98</span>,
-    <span class="hljs-attr">"taxPrice"</span>: <span class="hljs-number">39.99</span>,
-    <span class="hljs-attr">"shippingPrice"</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">439.97</span>,
-    <span class="hljs-attr">"isPaid"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"paidAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Processing"</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>
+    &quot;itemsPrice&quot;: 399.98,
+    &quot;taxPrice&quot;: 39.99,
+    &quot;shippingPrice&quot;: 0,
+    &quot;totalPrice&quot;: 439.97,
+    &quot;isPaid&quot;: true,
+    &quot;paidAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;,
+    &quot;status&quot;: &quot;Processing&quot;,
+    &quot;createdAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;
   }
 }
 </code></pre>
@@ -1097,62 +1131,62 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>500</code> - Server error</li>
 </ul>
 <hr>
-<h3 id="14-get-my-orders">14. Get My Orders</h3>
+<h3>14. Get My Orders</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/orders</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Get all orders for the logged-in user</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"count"</span>: <span class="hljs-number">3</span>,
-  <span class="hljs-attr">"data"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 3,
+  &quot;data&quot;: [
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-      <span class="hljs-attr">"items"</span>: [
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+      &quot;items&quot;: [
         {
-          <span class="hljs-attr">"product"</span>: {
-            <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-            <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/image1.jpg"</span>]
+          &quot;product&quot;: {
+            &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+            &quot;name&quot;: &quot;Wireless Headphones&quot;,
+            &quot;images&quot;: [&quot;https://example.com/image1.jpg&quot;]
           },
-          <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+          &quot;quantity&quot;: 2,
+          &quot;price&quot;: 199.99
         }
       ],
-      <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">439.97</span>,
-      <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Delivered"</span>,
-      <span class="hljs-attr">"isPaid"</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">"paidAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>,
-      <span class="hljs-attr">"isDelivered"</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">"deliveredAt"</span>: <span class="hljs-string">"2024-01-25T10:00:00.000Z"</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>
+      &quot;totalPrice&quot;: 439.97,
+      &quot;status&quot;: &quot;Delivered&quot;,
+      &quot;isPaid&quot;: true,
+      &quot;paidAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;,
+      &quot;isDelivered&quot;: true,
+      &quot;deliveredAt&quot;: &quot;2024-01-25T10:00:00.000Z&quot;,
+      &quot;createdAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;
     },
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f222222"</span>,
-      <span class="hljs-attr">"items"</span>: [
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f222222&quot;,
+      &quot;items&quot;: [
         {
-          <span class="hljs-attr">"product"</span>: {
-            <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654322"</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Smart Watch"</span>,
-            <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/watch.jpg"</span>]
+          &quot;product&quot;: {
+            &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654322&quot;,
+            &quot;name&quot;: &quot;Smart Watch&quot;,
+            &quot;images&quot;: [&quot;https://example.com/watch.jpg&quot;]
           },
-          <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">1</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">299.99</span>
+          &quot;quantity&quot;: 1,
+          &quot;price&quot;: 299.99
         }
       ],
-      <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">339.99</span>,
-      <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Processing"</span>,
-      <span class="hljs-attr">"isPaid"</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">"paidAt"</span>: <span class="hljs-string">"2024-01-22T09:15:00.000Z"</span>,
-      <span class="hljs-attr">"isDelivered"</span>: <span class="hljs-literal">false</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-22T09:15:00.000Z"</span>
+      &quot;totalPrice&quot;: 339.99,
+      &quot;status&quot;: &quot;Processing&quot;,
+      &quot;isPaid&quot;: true,
+      &quot;paidAt&quot;: &quot;2024-01-22T09:15:00.000Z&quot;,
+      &quot;isDelivered&quot;: false,
+      &quot;createdAt&quot;: &quot;2024-01-22T09:15:00.000Z&quot;
     }
   ]
 }
 </code></pre>
 <p><strong>Order Sorting:</strong> Orders are returned in reverse chronological order (newest first)</p>
 <hr>
-<h3 id="15-get-order-by-id">15. Get Order by ID</h3>
+<h3>15. Get Order by ID</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/orders/:id</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Get detailed information about a specific order</p>
@@ -1161,51 +1195,51 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Order ID</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-    <span class="hljs-attr">"user"</span>: {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-      <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+    &quot;user&quot;: {
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+      &quot;name&quot;: &quot;John Doe&quot;,
+      &quot;email&quot;: &quot;john@example.com&quot;
     },
-    <span class="hljs-attr">"items"</span>: [
+    &quot;items&quot;: [
       {
-        <span class="hljs-attr">"product"</span>: {
-          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-          <span class="hljs-attr">"images"</span>: [<span class="hljs-string">"https://example.com/image1.jpg"</span>]
+        &quot;product&quot;: {
+          &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+          &quot;name&quot;: &quot;Wireless Headphones&quot;,
+          &quot;images&quot;: [&quot;https://example.com/image1.jpg&quot;]
         },
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+        &quot;name&quot;: &quot;Wireless Headphones&quot;,
+        &quot;quantity&quot;: 2,
+        &quot;price&quot;: 199.99
       }
     ],
-    <span class="hljs-attr">"shippingAddress"</span>: {
-      <span class="hljs-attr">"street"</span>: <span class="hljs-string">"123 Main Street"</span>,
-      <span class="hljs-attr">"city"</span>: <span class="hljs-string">"New York"</span>,
-      <span class="hljs-attr">"state"</span>: <span class="hljs-string">"NY"</span>,
-      <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"10001"</span>,
-      <span class="hljs-attr">"country"</span>: <span class="hljs-string">"USA"</span>
+    &quot;shippingAddress&quot;: {
+      &quot;street&quot;: &quot;123 Main Street&quot;,
+      &quot;city&quot;: &quot;New York&quot;,
+      &quot;state&quot;: &quot;NY&quot;,
+      &quot;zipCode&quot;: &quot;10001&quot;,
+      &quot;country&quot;: &quot;USA&quot;
     },
-    <span class="hljs-attr">"paymentMethod"</span>: <span class="hljs-string">"stripe"</span>,
-    <span class="hljs-attr">"paymentResult"</span>: {
-      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"pi_1234567890"</span>,
-      <span class="hljs-attr">"status"</span>: <span class="hljs-string">"succeeded"</span>,
-      <span class="hljs-attr">"update_time"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>
+    &quot;paymentMethod&quot;: &quot;stripe&quot;,
+    &quot;paymentResult&quot;: {
+      &quot;id&quot;: &quot;pi_1234567890&quot;,
+      &quot;status&quot;: &quot;succeeded&quot;,
+      &quot;update_time&quot;: &quot;2024-01-20T15:30:00.000Z&quot;
     },
-    <span class="hljs-attr">"itemsPrice"</span>: <span class="hljs-number">399.98</span>,
-    <span class="hljs-attr">"taxPrice"</span>: <span class="hljs-number">39.99</span>,
-    <span class="hljs-attr">"shippingPrice"</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">439.97</span>,
-    <span class="hljs-attr">"isPaid"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"paidAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>,
-    <span class="hljs-attr">"isDelivered"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"deliveredAt"</span>: <span class="hljs-string">"2024-01-25T10:00:00.000Z"</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Delivered"</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-25T10:00:00.000Z"</span>
+    &quot;itemsPrice&quot;: 399.98,
+    &quot;taxPrice&quot;: 39.99,
+    &quot;shippingPrice&quot;: 0,
+    &quot;totalPrice&quot;: 439.97,
+    &quot;isPaid&quot;: true,
+    &quot;paidAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;,
+    &quot;isDelivered&quot;: true,
+    &quot;deliveredAt&quot;: &quot;2024-01-25T10:00:00.000Z&quot;,
+    &quot;status&quot;: &quot;Delivered&quot;,
+    &quot;createdAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-25T10:00:00.000Z&quot;
   }
 }
 </code></pre>
@@ -1221,7 +1255,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>401</code> - Unauthorized</li>
 </ul>
 <hr>
-<h3 id="16-cancel-order">16. Cancel Order</h3>
+<h3>16. Cancel Order</h3>
 <p><strong>Endpoint:</strong> <code>PUT /api/orders/:id/cancel</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Cancel a pending order (cannot cancel shipped/delivered orders)</p>
@@ -1230,19 +1264,19 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Order ID to cancel</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Cancelled"</span>,
-    <span class="hljs-attr">"items"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+    &quot;status&quot;: &quot;Cancelled&quot;,
+    &quot;items&quot;: [
       {
-        <span class="hljs-attr">"product"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>,
-        <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+        &quot;product&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+        &quot;quantity&quot;: 2,
+        &quot;price&quot;: 199.99
       }
     ],
-    <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">439.97</span>
+    &quot;totalPrice&quot;: 439.97
   }
 }
 </code></pre>
@@ -1259,8 +1293,8 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>404</code> - Order not found</li>
 </ul>
 <hr>
-<h2 id="-product-reviews">⭐ Product Reviews</h2>
-<h3 id="17-create-review">17. Create Review</h3>
+<h2>⭐ Product Reviews</h2>
+<h3>17. Create Review</h3>
 <p><strong>Endpoint:</strong> <code>POST /api/reviews/product/:productId</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Create a review for a purchased product</p>
@@ -1269,9 +1303,9 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>productId</code> - Product ID to review</li>
 </ul>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"rating"</span>: <span class="hljs-number">5</span>,
-  <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Excellent product! Highly recommended."</span>
+<pre><code class="language-json">{
+  &quot;rating&quot;: 5,
+  &quot;comment&quot;: &quot;Excellent product! Highly recommended.&quot;
 }
 </code></pre>
 <p><strong>Validation:</strong></p>
@@ -1280,19 +1314,19 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>comment</code>: Required, max 500 characters</li>
 </ul>
 <p><strong>Success Response (201):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f333333"</span>,
-    <span class="hljs-attr">"product"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-    <span class="hljs-attr">"user"</span>: {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f333333&quot;,
+    &quot;product&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+    &quot;user&quot;: {
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+      &quot;name&quot;: &quot;John Doe&quot;
     },
-    <span class="hljs-attr">"rating"</span>: <span class="hljs-number">5</span>,
-    <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Excellent product! Highly recommended."</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-26T14:30:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-26T14:30:00.000Z"</span>
+    &quot;rating&quot;: 5,
+    &quot;comment&quot;: &quot;Excellent product! Highly recommended.&quot;,
+    &quot;createdAt&quot;: &quot;2024-01-26T14:30:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-26T14:30:00.000Z&quot;
   }
 }
 </code></pre>
@@ -1310,7 +1344,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>401</code> - Unauthorized</li>
 </ul>
 <hr>
-<h3 id="18-get-product-reviews">18. Get Product Reviews</h3>
+<h3>18. Get Product Reviews</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/reviews/product/:productId</code></p>
 <p><strong>Authentication:</strong> Not Required</p>
 <p><strong>Description:</strong> Get all reviews for a specific product</p>
@@ -1319,36 +1353,36 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>productId</code> - Product ID</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"count"</span>: <span class="hljs-number">15</span>,
-  <span class="hljs-attr">"data"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 15,
+  &quot;data&quot;: [
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f333333"</span>,
-      <span class="hljs-attr">"user"</span>: {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f333333&quot;,
+      &quot;user&quot;: {
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+        &quot;name&quot;: &quot;John Doe&quot;
       },
-      <span class="hljs-attr">"rating"</span>: <span class="hljs-number">5</span>,
-      <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Excellent product! Highly recommended."</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-26T14:30:00.000Z"</span>
+      &quot;rating&quot;: 5,
+      &quot;comment&quot;: &quot;Excellent product! Highly recommended.&quot;,
+      &quot;createdAt&quot;: &quot;2024-01-26T14:30:00.000Z&quot;
     },
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f444444"</span>,
-      <span class="hljs-attr">"user"</span>: {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123457"</span>,
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Jane Smith"</span>
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f444444&quot;,
+      &quot;user&quot;: {
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123457&quot;,
+        &quot;name&quot;: &quot;Jane Smith&quot;
       },
-      <span class="hljs-attr">"rating"</span>: <span class="hljs-number">4</span>,
-      <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Good quality, fast delivery."</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-25T10:15:00.000Z"</span>
+      &quot;rating&quot;: 4,
+      &quot;comment&quot;: &quot;Good quality, fast delivery.&quot;,
+      &quot;createdAt&quot;: &quot;2024-01-25T10:15:00.000Z&quot;
     }
   ]
 }
 </code></pre>
 <p><strong>Sorting:</strong> Reviews are sorted by creation date (newest first)</p>
 <hr>
-<h3 id="19-update-review">19. Update Review</h3>
+<h3>19. Update Review</h3>
 <p><strong>Endpoint:</strong> <code>PUT /api/reviews/:id</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Update user&#39;s own review</p>
@@ -1357,24 +1391,24 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Review ID</li>
 </ul>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"rating"</span>: <span class="hljs-number">4</span>,
-  <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Updated: Still good but battery life could be better."</span>
+<pre><code class="language-json">{
+  &quot;rating&quot;: 4,
+  &quot;comment&quot;: &quot;Updated: Still good but battery life could be better.&quot;
 }
 </code></pre>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f333333"</span>,
-    <span class="hljs-attr">"user"</span>: {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f333333&quot;,
+    &quot;user&quot;: {
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+      &quot;name&quot;: &quot;John Doe&quot;
     },
-    <span class="hljs-attr">"rating"</span>: <span class="hljs-number">4</span>,
-    <span class="hljs-attr">"comment"</span>: <span class="hljs-string">"Updated: Still good but battery life could be better."</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-26T14:30:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-27T09:00:00.000Z"</span>
+    &quot;rating&quot;: 4,
+    &quot;comment&quot;: &quot;Updated: Still good but battery life could be better.&quot;,
+    &quot;createdAt&quot;: &quot;2024-01-26T14:30:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-27T09:00:00.000Z&quot;
   }
 }
 </code></pre>
@@ -1385,7 +1419,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>404</code> - Review not found</li>
 </ul>
 <hr>
-<h3 id="20-delete-review">20. Delete Review</h3>
+<h3>20. Delete Review</h3>
 <p><strong>Endpoint:</strong> <code>DELETE /api/reviews/:id</code></p>
 <p><strong>Authentication:</strong> Required</p>
 <p><strong>Description:</strong> Delete a review (own review or admin)</p>
@@ -1394,9 +1428,9 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Review ID</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Review deleted"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Review deleted&quot;
 }
 </code></pre>
 <p><strong>Authorization:</strong></p>
@@ -1409,24 +1443,24 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li>Product rating is automatically recalculated after deletion</li>
 </ul>
 <hr>
-<h2 id="-admin-panel">👨‍💼 Admin Panel</h2>
-<h3 id="21-create-product-admin-">21. Create Product (Admin)</h3>
+<h2>👨‍💼 Admin Panel</h2>
+<h3>21. Create Product (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>POST /api/admin/products</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Create a new product in the catalog</p>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"New Laptop"</span>,
-  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"High-performance laptop with 16GB RAM and 512GB SSD"</span>,
-  <span class="hljs-attr">"price"</span>: <span class="hljs-number">1299.99</span>,
-  <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Electronics"</span>,
-  <span class="hljs-attr">"stock"</span>: <span class="hljs-number">25</span>,
-  <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"TechBrand"</span>,
-  <span class="hljs-attr">"images"</span>: [
-    <span class="hljs-string">"https://example.com/laptop1.jpg"</span>,
-    <span class="hljs-string">"https://example.com/laptop2.jpg"</span>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;New Laptop&quot;,
+  &quot;description&quot;: &quot;High-performance laptop with 16GB RAM and 512GB SSD&quot;,
+  &quot;price&quot;: 1299.99,
+  &quot;category&quot;: &quot;Electronics&quot;,
+  &quot;stock&quot;: 25,
+  &quot;brand&quot;: &quot;TechBrand&quot;,
+  &quot;images&quot;: [
+    &quot;https://example.com/laptop1.jpg&quot;,
+    &quot;https://example.com/laptop2.jpg&quot;
   ],
-  <span class="hljs-attr">"featured"</span>: <span class="hljs-literal">true</span>
+  &quot;featured&quot;: true
 }
 </code></pre>
 <p><strong>Validation:</strong></p>
@@ -1438,25 +1472,25 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>stock</code>: Required, minimum 0</li>
 </ul>
 <p><strong>Success Response (201):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f555555"</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"New Laptop"</span>,
-    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"High-performance laptop with 16GB RAM and 512GB SSD"</span>,
-    <span class="hljs-attr">"price"</span>: <span class="hljs-number">1299.99</span>,
-    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Electronics"</span>,
-    <span class="hljs-attr">"stock"</span>: <span class="hljs-number">25</span>,
-    <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"TechBrand"</span>,
-    <span class="hljs-attr">"images"</span>: [
-      <span class="hljs-string">"https://example.com/laptop1.jpg"</span>,
-      <span class="hljs-string">"https://example.com/laptop2.jpg"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f555555&quot;,
+    &quot;name&quot;: &quot;New Laptop&quot;,
+    &quot;description&quot;: &quot;High-performance laptop with 16GB RAM and 512GB SSD&quot;,
+    &quot;price&quot;: 1299.99,
+    &quot;category&quot;: &quot;Electronics&quot;,
+    &quot;stock&quot;: 25,
+    &quot;brand&quot;: &quot;TechBrand&quot;,
+    &quot;images&quot;: [
+      &quot;https://example.com/laptop1.jpg&quot;,
+      &quot;https://example.com/laptop2.jpg&quot;
     ],
-    <span class="hljs-attr">"featured"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"rating"</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">"numReviews"</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-28T10:00:00.000Z"</span>,
-    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2024-01-28T10:00:00.000Z"</span>
+    &quot;featured&quot;: true,
+    &quot;rating&quot;: 0,
+    &quot;numReviews&quot;: 0,
+    &quot;createdAt&quot;: &quot;2024-01-28T10:00:00.000Z&quot;,
+    &quot;updatedAt&quot;: &quot;2024-01-28T10:00:00.000Z&quot;
   }
 }
 </code></pre>
@@ -1467,7 +1501,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>401</code> - Unauthorized</li>
 </ul>
 <hr>
-<h3 id="22-update-product-admin-">22. Update Product (Admin)</h3>
+<h3>22. Update Product (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>PUT /api/admin/products/:id</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Update existing product information</p>
@@ -1476,28 +1510,28 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Product ID</li>
 </ul>
 <p><strong>Request Body:</strong> (all fields optional)</p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Updated Laptop"</span>,
-  <span class="hljs-attr">"price"</span>: <span class="hljs-number">1199.99</span>,
-  <span class="hljs-attr">"stock"</span>: <span class="hljs-number">30</span>,
-  <span class="hljs-attr">"featured"</span>: <span class="hljs-literal">false</span>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Updated Laptop&quot;,
+  &quot;price&quot;: 1199.99,
+  &quot;stock&quot;: 30,
+  &quot;featured&quot;: false
 }
 </code></pre>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-string">"data"</span>: {
-    <span class="hljs-string">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f555555"</span>,
-    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated Laptop"</span>,
-    <span class="hljs-string">"price"</span>: <span class="hljs-number">1199.99</span>,
-    <span class="hljs-string">"stock"</span>: <span class="hljs-number">30</span>,
-    <span class="hljs-string">"featured"</span>: <span class="hljs-literal">false</span>,
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f555555&quot;,
+    &quot;name&quot;: &quot;Updated Laptop&quot;,
+    &quot;price&quot;: 1199.99,
+    &quot;stock&quot;: 30,
+    &quot;featured&quot;: false,
     // ... other fields
   }
 }
 </code></pre>
 <hr>
-<h3 id="23-delete-product-admin-">23. Delete Product (Admin)</h3>
+<h3>23. Delete Product (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>DELETE /api/admin/products/:id</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Delete a product from the catalog</p>
@@ -1506,50 +1540,50 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Product ID</li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Product deleted"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Product deleted&quot;
 }
 </code></pre>
 <p><strong>Warning:</strong> Deleting a product doesn&#39;t affect existing orders containing that product</p>
 <hr>
-<h3 id="24-get-all-orders-admin-">24. Get All Orders (Admin)</h3>
+<h3>24. Get All Orders (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/admin/orders</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Get all orders in the system</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"count"</span>: <span class="hljs-number">150</span>,
-  <span class="hljs-attr">"data"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 150,
+  &quot;data&quot;: [
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-      <span class="hljs-attr">"user"</span>: {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-        <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+      &quot;user&quot;: {
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+        &quot;name&quot;: &quot;John Doe&quot;,
+        &quot;email&quot;: &quot;john@example.com&quot;
       },
-      <span class="hljs-attr">"items"</span>: [
+      &quot;items&quot;: [
         {
-          <span class="hljs-attr">"product"</span>: {
-            <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>
+          &quot;product&quot;: {
+            &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+            &quot;name&quot;: &quot;Wireless Headphones&quot;
           },
-          <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2</span>,
-          <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+          &quot;quantity&quot;: 2,
+          &quot;price&quot;: 199.99
         }
       ],
-      <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">439.97</span>,
-      <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Processing"</span>,
-      <span class="hljs-attr">"isPaid"</span>: <span class="hljs-literal">true</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-20T15:30:00.000Z"</span>
+      &quot;totalPrice&quot;: 439.97,
+      &quot;status&quot;: &quot;Processing&quot;,
+      &quot;isPaid&quot;: true,
+      &quot;createdAt&quot;: &quot;2024-01-20T15:30:00.000Z&quot;
     }
     // ... more orders
   ]
 }
 </code></pre>
 <hr>
-<h3 id="25-update-order-status-admin-">25. Update Order Status (Admin)</h3>
+<h3>25. Update Order Status (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>PUT /api/admin/orders/:id</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Update order status (for order fulfillment workflow)</p>
@@ -1558,8 +1592,8 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>id</code> - Order ID</li>
 </ul>
 <p><strong>Request Body:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Shipped"</span>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;Shipped&quot;
 }
 </code></pre>
 <p><strong>Valid Status Values:</strong></p>
@@ -1571,12 +1605,12 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>Cancelled</code></li>
 </ul>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-string">"data"</span>: {
-    <span class="hljs-string">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-    <span class="hljs-string">"status"</span>: <span class="hljs-string">"Shipped"</span>,
-    <span class="hljs-string">"isDelivered"</span>: <span class="hljs-literal">false</span>,
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+    &quot;status&quot;: &quot;Shipped&quot;,
+    &quot;isDelivered&quot;: false,
     // ... other fields
   }
 }
@@ -1590,22 +1624,22 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 </li>
 </ul>
 <hr>
-<h3 id="26-get-all-users-admin-">26. Get All Users (Admin)</h3>
+<h3>26. Get All Users (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/admin/users</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Get list of all registered users</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"count"</span>: <span class="hljs-number">1250</span>,
-  <span class="hljs-attr">"data"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;count&quot;: 1250,
+  &quot;data&quot;: [
     {
-      <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f123456"</span>,
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-      <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>,
-      <span class="hljs-attr">"role"</span>: <span class="hljs-string">"user"</span>,
-      <span class="hljs-attr">"phone"</span>: <span class="hljs-string">"+1234567890"</span>,
-      <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-15T10:30:00.000Z"</span>
+      &quot;_id&quot;: &quot;614c1b5e9f1b2c001f123456&quot;,
+      &quot;name&quot;: &quot;John Doe&quot;,
+      &quot;email&quot;: &quot;john@example.com&quot;,
+      &quot;role&quot;: &quot;user&quot;,
+      &quot;phone&quot;: &quot;+1234567890&quot;,
+      &quot;createdAt&quot;: &quot;2024-01-15T10:30:00.000Z&quot;
     }
     // ... more users
   ]
@@ -1613,39 +1647,39 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 </code></pre>
 <p><strong>Note:</strong> Password fields are excluded from response</p>
 <hr>
-<h3 id="27-get-dashboard-stats-admin-">27. Get Dashboard Stats (Admin)</h3>
+<h3>27. Get Dashboard Stats (Admin)</h3>
 <p><strong>Endpoint:</strong> <code>GET /api/admin/dashboard</code></p>
 <p><strong>Authentication:</strong> Required (Admin Only)</p>
 <p><strong>Description:</strong> Get comprehensive dashboard statistics</p>
 <p><strong>Success Response (200):</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"data"</span>: {
-    <span class="hljs-attr">"totalUsers"</span>: <span class="hljs-number">1250</span>,
-    <span class="hljs-attr">"totalProducts"</span>: <span class="hljs-number">450</span>,
-    <span class="hljs-attr">"totalOrders"</span>: <span class="hljs-number">3842</span>,
-    <span class="hljs-attr">"totalRevenue"</span>: <span class="hljs-number">458750.50</span>,
-    <span class="hljs-attr">"recentOrders"</span>: [
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;totalUsers&quot;: 1250,
+    &quot;totalProducts&quot;: 450,
+    &quot;totalOrders&quot;: 3842,
+    &quot;totalRevenue&quot;: 458750.50,
+    &quot;recentOrders&quot;: [
       {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f111111"</span>,
-        <span class="hljs-attr">"user"</span>: {
-          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>,
-          <span class="hljs-attr">"email"</span>: <span class="hljs-string">"john@example.com"</span>
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f111111&quot;,
+        &quot;user&quot;: {
+          &quot;name&quot;: &quot;John Doe&quot;,
+          &quot;email&quot;: &quot;john@example.com&quot;
         },
-        <span class="hljs-attr">"totalPrice"</span>: <span class="hljs-number">439.97</span>,
-        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Processing"</span>,
-        <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2024-01-28T15:30:00.000Z"</span>
+        &quot;totalPrice&quot;: 439.97,
+        &quot;status&quot;: &quot;Processing&quot;,
+        &quot;createdAt&quot;: &quot;2024-01-28T15:30:00.000Z&quot;
       }
-      // ... <span class="hljs-number">4</span> more recent orders
+      // ... 4 more recent orders
     ],
-    <span class="hljs-attr">"lowStockProducts"</span>: [
+    &quot;lowStockProducts&quot;: [
       {
-        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Wireless Headphones"</span>,
-        <span class="hljs-attr">"stock"</span>: <span class="hljs-number">3</span>,
-        <span class="hljs-attr">"price"</span>: <span class="hljs-number">199.99</span>
+        &quot;_id&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+        &quot;name&quot;: &quot;Wireless Headphones&quot;,
+        &quot;stock&quot;: 3,
+        &quot;price&quot;: 199.99
       }
-      // ... up to <span class="hljs-number">10</span> low stock products
+      // ... up to 10 low stock products
     ]
   }
 }
@@ -1660,14 +1694,14 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <li><code>lowStockProducts</code> - Products with stock &lt; 10</li>
 </ul>
 <hr>
-<h2 id="-error-handling">🔒 Error Handling</h2>
-<h3 id="standard-error-response-format">Standard Error Response Format</h3>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Error description here"</span>
+<h2>🔒 Error Handling</h2>
+<h3>Standard Error Response Format</h3>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Error description here&quot;
 }
 </code></pre>
-<h3 id="http-status-codes">HTTP Status Codes</h3>
+<h3>HTTP Status Codes</h3>
 <table>
 <thead>
 <tr>
@@ -1676,8 +1710,7 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <th>When Used</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>200</td>
 <td>OK</td>
 <td>Successful GET, PUT, DELETE</td>
@@ -1712,193 +1745,199 @@ GET <span class="hljs-meta-keyword">/api/</span>products?page=<span class="hljs-
 <td>Internal Server Error</td>
 <td>Server-side errors</td>
 </tr>
-</tbody>
-</table>
-<h3 id="common-error-scenarios">Common Error Scenarios</h3>
+</tbody></table>
+<h3>Common Error Scenarios</h3>
 <p><strong>Authentication Errors:</strong></p>
-<pre><code class="lang-json"><span class="hljs-comment">// Missing token</span>
+<pre><code class="language-json">// Missing token
 {
-  <span class="hljs-string">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-string">"message"</span>: <span class="hljs-string">"Not authorized to access this route"</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Not authorized to access this route&quot;
 }
 
-<span class="hljs-comment">// Invalid token</span>
+// Invalid token
 {
-  <span class="hljs-string">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-string">"message"</span>: <span class="hljs-string">"Not authorized, token failed"</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Not authorized, token failed&quot;
 }
 
-<span class="hljs-comment">// Admin access required</span>
+// Admin access required
 {
-  <span class="hljs-string">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-string">"message"</span>: <span class="hljs-string">"Access denied. Admin only."</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Access denied. Admin only.&quot;
 }
 </code></pre>
 <p><strong>Validation Errors:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"\"email\" must be a valid email"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;\&quot;email\&quot; must be a valid email&quot;
 }
 
 {
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"\"password\" length must be at least 6 characters long"</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;\&quot;password\&quot; length must be at least 6 characters long&quot;
 }
 </code></pre>
 <p><strong>Resource Errors:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Product not found"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Product not found&quot;
 }
 
 {
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Order not found"</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Order not found&quot;
 }
 </code></pre>
 <p><strong>Business Logic Errors:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Insufficient stock"</span>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Insufficient stock&quot;
 }
 
 {
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cart is empty"</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Cart is empty&quot;
 }
 
 {
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Cannot cancel shipped or delivered orders"</span>
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Cannot cancel shipped or delivered orders&quot;
 }
 </code></pre>
 <hr>
-<h2 id="-testing-guide">🧪 Testing Guide</h2>
-<h3 id="using-postman">Using Postman</h3>
-<h4 id="1-setup-environment">1. Setup Environment</h4>
+<h2>🧪 Testing Guide</h2>
+<h3>Using Postman</h3>
+<h4>1. Setup Environment</h4>
 <p>Create a Postman environment with these variables:</p>
-<pre><code><span class="hljs-string">BASE_URL:</span> <span class="hljs-string">http:</span><span class="hljs-comment">//localhost:5000/api</span>
-<span class="hljs-string">TOKEN:</span> (will be set after login)
-</code></pre><h4 id="2-testing-authentication-flow">2. Testing Authentication Flow</h4>
+<pre><code>BASE_URL: http://localhost:5000/api
+TOKEN: (will be set after login)
+</code></pre>
+<h4>2. Testing Authentication Flow</h4>
 <p><strong>Step 1: Register User</strong></p>
-<pre><code>POST {{<span class="hljs-keyword">BASE_URL}}/auth/register
-</span><span class="hljs-keyword">Body </span>(<span class="hljs-keyword">JSON):
-</span>{
-  <span class="hljs-string">"name"</span>: <span class="hljs-string">"Test User"</span>,
-  <span class="hljs-string">"email"</span>: <span class="hljs-string">"test@example.com"</span>,
-  <span class="hljs-string">"password"</span>: <span class="hljs-string">"password123"</span>
-}
-</code></pre><p><strong>Step 2: Login</strong></p>
-<pre><code>POST {{BASE_URL}}<span class="hljs-regexp">/auth/</span>login
+<pre><code>POST {{BASE_URL}}/auth/register
 Body (JSON):
 {
-  <span class="hljs-string">"email"</span>: <span class="hljs-string">"test@example.com"</span>,
-  <span class="hljs-string">"password"</span>: <span class="hljs-string">"password123"</span>
+  &quot;name&quot;: &quot;Test User&quot;,
+  &quot;email&quot;: &quot;test@example.com&quot;,
+  &quot;password&quot;: &quot;password123&quot;
 }
-
-<span class="hljs-regexp">//</span> Copy token from response
-<span class="hljs-regexp">//</span> Set TOKEN variable <span class="hljs-keyword">in</span> Postman
-</code></pre><p><strong>Step 3: Access Protected Route</strong></p>
-<pre><code><span class="hljs-class">GET </span>{{BASE_URL}}<span class="hljs-meta-keyword">/auth/</span>profile
-<span class="hljs-symbol">Headers:</span>
-<span class="hljs-symbol">  Authorization:</span> <span class="hljs-class">Bearer </span>{{TOKEN}}
-</code></pre><h4 id="3-testing-product-flow">3. Testing Product Flow</h4>
-<pre><code><span class="hljs-comment">// Get all products</span>
-<span class="hljs-class">GET </span>{{BASE_URL}}/products?page=<span class="hljs-number">1</span><span class="hljs-variable">&amp;limit</span>=<span class="hljs-number">10</span>
-
-<span class="hljs-comment">// Search products</span>
-<span class="hljs-class">GET </span>{{BASE_URL}}/products?search=wireless<span class="hljs-variable">&amp;category</span>=Electronics
-
-<span class="hljs-comment">// Get single product</span>
-<span class="hljs-class">GET </span>{{BASE_URL}}<span class="hljs-meta-keyword">/products/</span>:productId
-
-<span class="hljs-comment">// Get featured products</span>
-<span class="hljs-class">GET </span>{{BASE_URL}}<span class="hljs-meta-keyword">/products/</span>featured
-</code></pre><h4 id="4-testing-shopping-cart">4. Testing Shopping Cart</h4>
-<pre><code><span class="hljs-comment">// Add to cart</span>
-<span class="hljs-class">POST </span>{{BASE_URL}}/cart
-<span class="hljs-symbol">Headers:</span> Authorization: <span class="hljs-class">Bearer </span>{{TOKEN}}
-<span class="hljs-symbol">Body:</span>
+</code></pre>
+<p><strong>Step 2: Login</strong></p>
+<pre><code>POST {{BASE_URL}}/auth/login
+Body (JSON):
 {
-  <span class="hljs-string">"productId"</span>: <span class="hljs-string">"614c1b5e9f1b2c001f654321"</span>,
-  <span class="hljs-string">"quantity"</span>: <span class="hljs-number">2</span>
+  &quot;email&quot;: &quot;test@example.com&quot;,
+  &quot;password&quot;: &quot;password123&quot;
 }
 
-<span class="hljs-comment">// Get cart</span>
-<span class="hljs-class">GET </span>{{BASE_URL}}/cart
-<span class="hljs-symbol">Headers:</span> Authorization: <span class="hljs-class">Bearer </span>{{TOKEN}}
+// Copy token from response
+// Set TOKEN variable in Postman
+</code></pre>
+<p><strong>Step 3: Access Protected Route</strong></p>
+<pre><code>GET {{BASE_URL}}/auth/profile
+Headers:
+  Authorization: Bearer {{TOKEN}}
+</code></pre>
+<h4>3. Testing Product Flow</h4>
+<pre><code>// Get all products
+GET {{BASE_URL}}/products?page=1&amp;limit=10
 
-<span class="hljs-comment">// Update cart item</span>
-<span class="hljs-class">PUT </span>{{BASE_URL}}<span class="hljs-meta-keyword">/cart/</span>:productId
-<span class="hljs-symbol">Headers:</span> Authorization: <span class="hljs-class">Bearer </span>{{TOKEN}}
-<span class="hljs-symbol">Body:</span>
+// Search products
+GET {{BASE_URL}}/products?search=wireless&amp;category=Electronics
+
+// Get single product
+GET {{BASE_URL}}/products/:productId
+
+// Get featured products
+GET {{BASE_URL}}/products/featured
+</code></pre>
+<h4>4. Testing Shopping Cart</h4>
+<pre><code>// Add to cart
+POST {{BASE_URL}}/cart
+Headers: Authorization: Bearer {{TOKEN}}
+Body:
 {
-  <span class="hljs-string">"quantity"</span>: <span class="hljs-number">3</span>
+  &quot;productId&quot;: &quot;614c1b5e9f1b2c001f654321&quot;,
+  &quot;quantity&quot;: 2
 }
 
-<span class="hljs-comment">// Remove from cart</span>
-<span class="hljs-class">DELETE </span>{{BASE_URL}}<span class="hljs-meta-keyword">/cart/</span>:productId
-<span class="hljs-symbol">Headers:</span> Authorization: <span class="hljs-class">Bearer </span>{{TOKEN}}
-</code></pre><h4 id="5-testing-order-creation">5. Testing Order Creation</h4>
+// Get cart
+GET {{BASE_URL}}/cart
+Headers: Authorization: Bearer {{TOKEN}}
+
+// Update cart item
+PUT {{BASE_URL}}/cart/:productId
+Headers: Authorization: Bearer {{TOKEN}}
+Body:
+{
+  &quot;quantity&quot;: 3
+}
+
+// Remove from cart
+DELETE {{BASE_URL}}/cart/:productId
+Headers: Authorization: Bearer {{TOKEN}}
+</code></pre>
+<h4>5. Testing Order Creation</h4>
 <pre><code>POST {{BASE_URL}}/orders
 Headers: Authorization: Bearer {{TOKEN}}
 Body:
 {
-  <span class="hljs-string">"shippingAddress"</span>: {
-    <span class="hljs-string">"street"</span>: <span class="hljs-string">"123 Test St"</span>,
-    <span class="hljs-string">"city"</span>: <span class="hljs-string">"Test City"</span>,
-    <span class="hljs-string">"state"</span>: <span class="hljs-string">"TC"</span>,
-    <span class="hljs-string">"zipCode"</span>: <span class="hljs-string">"12345"</span>,
-    <span class="hljs-string">"country"</span>: <span class="hljs-string">"USA"</span>
+  &quot;shippingAddress&quot;: {
+    &quot;street&quot;: &quot;123 Test St&quot;,
+    &quot;city&quot;: &quot;Test City&quot;,
+    &quot;state&quot;: &quot;TC&quot;,
+    &quot;zipCode&quot;: &quot;12345&quot;,
+    &quot;country&quot;: &quot;USA&quot;
   },
-  <span class="hljs-string">"paymentMethodId"</span>: <span class="hljs-string">"pm_card_visa"</span>
+  &quot;paymentMethodId&quot;: &quot;pm_card_visa&quot;
 }
-</code></pre><h3 id="testing-with-curl">Testing with cURL</h3>
+</code></pre>
+<h3>Testing with cURL</h3>
 <p><strong>Register:</strong></p>
-<pre><code class="lang-bash">curl -X POST http:<span class="hljs-regexp">//</span>localhost:<span class="hljs-number">5000</span><span class="hljs-regexp">/api/</span>auth<span class="hljs-regexp">/register \
-  -H "Content-Type: application/</span>json<span class="hljs-string">" \
-  -d '{"</span>name<span class="hljs-string">":"</span>Test Use<span class="hljs-string">r","</span>email<span class="hljs-string">":"</span>test@example.com<span class="hljs-string">","</span>password<span class="hljs-string">":"</span>password123<span class="hljs-string">"}'</span>
+<pre><code class="language-bash">curl -X POST http://localhost:5000/api/auth/register \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{&quot;name&quot;:&quot;Test User&quot;,&quot;email&quot;:&quot;test@example.com&quot;,&quot;password&quot;:&quot;password123&quot;}&#39;
 </code></pre>
 <p><strong>Login:</strong></p>
-<pre><code class="lang-bash">curl -X POST http:<span class="hljs-regexp">//</span>localhost:<span class="hljs-number">5000</span><span class="hljs-regexp">/api/</span>auth<span class="hljs-regexp">/login \
-  -H "Content-Type: application/</span>json<span class="hljs-string">" \
-  -d '{"</span>email<span class="hljs-string">":"</span>test@example.com<span class="hljs-string">","</span>password<span class="hljs-string">":"</span>password123<span class="hljs-string">"}'</span>
+<pre><code class="language-bash">curl -X POST http://localhost:5000/api/auth/login \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{&quot;email&quot;:&quot;test@example.com&quot;,&quot;password&quot;:&quot;password123&quot;}&#39;
 </code></pre>
 <p><strong>Get Profile:</strong></p>
-<pre><code class="lang-bash">curl -X GET <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/localhost:5000/api</span><span class="hljs-regexp">/auth/profile</span> \
-  -H <span class="hljs-string">"Authorization: Bearer YOUR_TOKEN_HERE"</span>
+<pre><code class="language-bash">curl -X GET http://localhost:5000/api/auth/profile \
+  -H &quot;Authorization: Bearer YOUR_TOKEN_HERE&quot;
 </code></pre>
-<h3 id="automated-testing-optional-">Automated Testing (Optional)</h3>
+<h3>Automated Testing (Optional)</h3>
 <p>Create <code>tests/</code> folder with Jest or Mocha tests:</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// tests/auth.test.js</span>
-<span class="hljs-keyword">const</span> request = require(<span class="hljs-string">'supertest'</span>);
-<span class="hljs-keyword">const</span> app = require(<span class="hljs-string">'../server'</span>);
+<pre><code class="language-javascript">// tests/auth.test.js
+const request = require(&#39;supertest&#39;);
+const app = require(&#39;../server&#39;);
 
-describe(<span class="hljs-string">'Auth Endpoints'</span>, () =&gt; {
-  it(<span class="hljs-string">'should register a new user'</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> request(app)
-      .post(<span class="hljs-string">'/api/auth/register'</span>)
+describe(&#39;Auth Endpoints&#39;, () =&gt; {
+  it(&#39;should register a new user&#39;, async () =&gt; {
+    const res = await request(app)
+      .post(&#39;/api/auth/register&#39;)
       .send({
-        name: <span class="hljs-string">'Test User'</span>,
-        email: <span class="hljs-string">'test@example.com'</span>,
-        password: <span class="hljs-string">'password123'</span>
+        name: &#39;Test User&#39;,
+        email: &#39;test@example.com&#39;,
+        password: &#39;password123&#39;
       });
-
-    expect(res.statusCode).toBe(<span class="hljs-number">201</span>);
-    expect(res.body.success).toBe(<span class="hljs-keyword">true</span>);
-    expect(res.body.data).toHaveProperty(<span class="hljs-string">'token'</span>);
+    
+    expect(res.statusCode).toBe(201);
+    expect(res.body.success).toBe(true);
+    expect(res.body.data).toHaveProperty(&#39;token&#39;);
   });
 });
 </code></pre>
 <hr>
-<h2 id="-deployment">🚀 Deployment</h2>
-<h3 id="option-1-deploy-to-render">Option 1: Deploy to Render</h3>
+<h2>🚀 Deployment</h2>
+<h3>Option 1: Deploy to Render</h3>
 <p><strong>Step 1: Prepare Repository</strong></p>
-<pre><code class="lang-bash">git init
-git <span class="hljs-keyword">add</span><span class="bash"> .
-</span>git commit -m <span class="hljs-string">"Initial commit"</span>
-git remote <span class="hljs-keyword">add</span><span class="bash"> origin &lt;your-github-repo&gt;
-</span>git push -u origin main
+<pre><code class="language-bash">git init
+git add .
+git commit -m &quot;Initial commit&quot;
+git remote add origin &lt;your-github-repo&gt;
+git push -u origin main
 </code></pre>
 <p><strong>Step 2: Create Render Account</strong></p>
 <ul>
@@ -1916,43 +1955,44 @@ git remote <span class="hljs-keyword">add</span><span class="bash"> origin &lt;y
 <li>Instance Type: Free or Starter</li>
 </ul>
 <p><strong>Step 4: Add Environment Variables</strong></p>
-<pre><code><span class="hljs-attr">NODE_ENV</span>=production
-<span class="hljs-attr">MONGO_URI</span>=&lt;your-mongodb-atlas-uri&gt;
-<span class="hljs-attr">JWT_SECRET</span>=&lt;your-secret-key&gt;
-<span class="hljs-attr">STRIPE_SECRET_KEY</span>=&lt;your-stripe-key&gt;
-</code></pre><p><strong>Step 5: Deploy</strong></p>
+<pre><code>NODE_ENV=production
+MONGO_URI=&lt;your-mongodb-atlas-uri&gt;
+JWT_SECRET=&lt;your-secret-key&gt;
+STRIPE_SECRET_KEY=&lt;your-stripe-key&gt;
+</code></pre>
+<p><strong>Step 5: Deploy</strong></p>
 <ul>
 <li>Click &quot;Create Web Service&quot;</li>
 <li>Wait for deployment (5-10 minutes)</li>
 <li>Your API will be live at <code>https://your-app.onrender.com</code></li>
 </ul>
 <hr>
-<h3 id="option-2-deploy-to-heroku">Option 2: Deploy to Heroku</h3>
-<pre><code class="lang-bash"><span class="hljs-meta"># Install Heroku CLI</span>
+<h3>Option 2: Deploy to Heroku</h3>
+<pre><code class="language-bash"># Install Heroku CLI
 brew install heroku/brew/heroku
 
-<span class="hljs-meta"># Login</span>
+# Login
 heroku login
 
-<span class="hljs-meta"># Create app</span>
+# Create app
 heroku create ecommerce-api-yourname
 
-<span class="hljs-meta"># Add MongoDB</span>
+# Add MongoDB
 heroku addons:create mongolab:sandbox
 
-<span class="hljs-meta"># Set environment variables</span>
-heroku config:<span class="hljs-keyword">set</span> NODE_ENV=production
-heroku config:<span class="hljs-keyword">set</span> JWT_SECRET=your_secret_key
-heroku config:<span class="hljs-keyword">set</span> STRIPE_SECRET_KEY=your_stripe_key
+# Set environment variables
+heroku config:set NODE_ENV=production
+heroku config:set JWT_SECRET=your_secret_key
+heroku config:set STRIPE_SECRET_KEY=your_stripe_key
 
-<span class="hljs-meta"># Deploy</span>
+# Deploy
 git push heroku main
 
-<span class="hljs-meta"># Open app</span>
+# Open app
 heroku open
 </code></pre>
 <hr>
-<h3 id="option-3-deploy-to-digital-ocean">Option 3: Deploy to Digital Ocean</h3>
+<h3>Option 3: Deploy to Digital Ocean</h3>
 <ol>
 <li>Create droplet (Ubuntu 22.04)</li>
 <li>SSH into server</li>
@@ -1963,7 +2003,7 @@ heroku open
 <li>Configure SSL with Let&#39;s Encrypt</li>
 </ol>
 <hr>
-<h3 id="mongodb-atlas-setup-cloud-database-">MongoDB Atlas Setup (Cloud Database)</h3>
+<h3>MongoDB Atlas Setup (Cloud Database)</h3>
 <p><strong>Step 1: Create Account</strong></p>
 <ul>
 <li>Go to <a href="https://www.mongodb.com/cloud/atlas">https://www.mongodb.com/cloud/atlas</a></li>
@@ -1988,10 +2028,11 @@ heroku open
 <li>Replace <code>&lt;password&gt;</code> with your password</li>
 </ul>
 <p><strong>Example:</strong></p>
-<pre><code>mongodb+srv://username:password<span class="hljs-symbol">@cluster0</span>.xxxxx.mongodb.net/ecommerce?retryWrites=<span class="hljs-literal">true</span>&amp;w=majority
-</code></pre><hr>
-<h2 id="-best-practices">📋 Best Practices</h2>
-<h3 id="security-best-practices">Security Best Practices</h3>
+<pre><code>mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/ecommerce?retryWrites=true&amp;w=majority
+</code></pre>
+<hr>
+<h2>📋 Best Practices</h2>
+<h3>Security Best Practices</h3>
 <ol>
 <li><p><strong>Environment Variables</strong></p>
 <ul>
@@ -2023,7 +2064,7 @@ heroku open
 </ul>
 </li>
 </ol>
-<h3 id="performance-optimization">Performance Optimization</h3>
+<h3>Performance Optimization</h3>
 <ol>
 <li><p><strong>Database</strong></p>
 <ul>
@@ -2047,35 +2088,36 @@ heroku open
 </ul>
 </li>
 </ol>
-<h3 id="monitoring-logging">Monitoring &amp; Logging</h3>
+<h3>Monitoring &amp; Logging</h3>
 <p><strong>Production Logging:</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> winston = require(<span class="hljs-string">'winston'</span>);
+<pre><code class="language-javascript">const winston = require(&#39;winston&#39;);
 
-<span class="hljs-keyword">const</span> logger = winston.createLogger({
-  level: <span class="hljs-string">'info'</span>,
+const logger = winston.createLogger({
+  level: &#39;info&#39;,
   format: winston.format.json(),
   transports: [
-    <span class="hljs-keyword">new</span> winston.transports.<span class="hljs-built_in">File</span>({ filename: <span class="hljs-string">'error.log'</span>, level: <span class="hljs-string">'error'</span> }),
-    <span class="hljs-keyword">new</span> winston.transports.<span class="hljs-built_in">File</span>({ filename: <span class="hljs-string">'combined.log'</span> })
+    new winston.transports.File({ filename: &#39;error.log&#39;, level: &#39;error&#39; }),
+    new winston.transports.File({ filename: &#39;combined.log&#39; })
   ]
 });
 </code></pre>
 <p><strong>Health Checks:</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-selector-tag">app</span><span class="hljs-selector-class">.get</span>(<span class="hljs-string">'/health'</span>, (req, res) =&gt; {
-  <span class="hljs-selector-tag">res</span><span class="hljs-selector-class">.json</span>({
-    <span class="hljs-attribute">status</span>: <span class="hljs-string">'healthy'</span>,
-    <span class="hljs-attribute">timestamp</span>: new Date().toISOString(),
-    <span class="hljs-attribute">uptime</span>: process.uptime(),
-    <span class="hljs-attribute">memory</span>: process.memoryUsage()
+<pre><code class="language-javascript">app.get(&#39;/health&#39;, (req, res) =&gt; {
+  res.json({
+    status: &#39;healthy&#39;,
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    memory: process.memoryUsage()
   });
 });
 </code></pre>
 <hr>
-<h2 id="-troubleshooting">🔧 Troubleshooting</h2>
-<h3 id="common-issues">Common Issues</h3>
+<h2>🔧 Troubleshooting</h2>
+<h3>Common Issues</h3>
 <p><strong>1. MongoDB Connection Failed</strong></p>
-<pre><code><span class="hljs-keyword">Error: </span>MongoDB connection failed
-</code></pre><p><strong>Solutions:</strong></p>
+<pre><code>Error: MongoDB connection failed
+</code></pre>
+<p><strong>Solutions:</strong></p>
 <ul>
 <li>Check if MongoDB is running: <code>sudo systemctl status mongod</code></li>
 <li>Verify MONGO_URI in <code>.env</code></li>
@@ -2083,8 +2125,9 @@ heroku open
 <li>Verify MongoDB Atlas IP whitelist</li>
 </ul>
 <p><strong>2. JWT Token Invalid</strong></p>
-<pre><code><span class="hljs-keyword">Error: </span>Not authorized, token failed
-</code></pre><p><strong>Solutions:</strong></p>
+<pre><code>Error: Not authorized, token failed
+</code></pre>
+<p><strong>Solutions:</strong></p>
 <ul>
 <li>Check JWT_SECRET matches</li>
 <li>Verify token format: <code>Bearer &lt;token&gt;</code></li>
@@ -2092,8 +2135,9 @@ heroku open
 <li>Re-login to get new token</li>
 </ul>
 <p><strong>3. Stripe Payment Failed</strong></p>
-<pre><code><span class="hljs-keyword">Error: </span>Payment failed
-</code></pre><p><strong>Solutions:</strong></p>
+<pre><code>Error: Payment failed
+</code></pre>
+<p><strong>Solutions:</strong></p>
 <ul>
 <li>Verify Stripe secret key</li>
 <li>Use test cards in development</li>
@@ -2101,38 +2145,40 @@ heroku open
 <li>Verify payment amount &gt; 0</li>
 </ul>
 <p><strong>4. Port Already in Use</strong></p>
-<pre><code><span class="hljs-keyword">Error: </span>EADDRINUSE: address already in use :::5000
-</code></pre><p><strong>Solutions:</strong></p>
-<pre><code class="lang-bash"># Find <span class="hljs-keyword">process</span> using <span class="hljs-keyword">port</span>
-lsof -i :<span class="hljs-number">5000</span>
+<pre><code>Error: EADDRINUSE: address already in use :::5000
+</code></pre>
+<p><strong>Solutions:</strong></p>
+<pre><code class="language-bash"># Find process using port
+lsof -i :5000
 
-# Kill <span class="hljs-keyword">process</span>
-kill -<span class="hljs-number">9</span> &lt;PID&gt;
+# Kill process
+kill -9 &lt;PID&gt;
 
-# <span class="hljs-keyword">Or</span> <span class="hljs-keyword">use</span> different <span class="hljs-keyword">port</span>
-<span class="hljs-keyword">PORT</span>=<span class="hljs-number">5001</span> npm run dev
+# Or use different port
+PORT=5001 npm run dev
 </code></pre>
 <p><strong>5. Module Not Found</strong></p>
-<pre><code><span class="hljs-keyword">Error: </span>Cannot find module 'express'
-</code></pre><p><strong>Solutions:</strong></p>
-<pre><code class="lang-bash"><span class="hljs-comment"># Reinstall dependencies</span>
+<pre><code>Error: Cannot find module &#39;express&#39;
+</code></pre>
+<p><strong>Solutions:</strong></p>
+<pre><code class="language-bash"># Reinstall dependencies
 rm -rf node_modules package-lock.json
-npm <span class="hljs-keyword">install</span>
+npm install
 </code></pre>
 <hr>
-<h2 id="-support-contact">📞 Support &amp; Contact</h2>
-<h3 id="documentation-resources">Documentation Resources</h3>
+<h2>📞 Support &amp; Contact</h2>
+<h3>Documentation Resources</h3>
 <ul>
 <li>Express.js: <a href="https://expressjs.com/">https://expressjs.com/</a></li>
 <li>Mongoose: <a href="https://mongoosejs.com/">https://mongoosejs.com/</a></li>
 <li>Stripe API: <a href="https://stripe.com/docs/api">https://stripe.com/docs/api</a></li>
 <li>JWT: <a href="https://jwt.io/">https://jwt.io/</a></li>
 </ul>
-<h3 id="api-status">API Status</h3>
+<h3>API Status</h3>
 <p>Check API health: <code>GET /health</code></p>
 <hr>
-<h2 id="-changelog">📝 Changelog</h2>
-<h3 id="version-2-0-0-current-">Version 2.0.0 (Current)</h3>
+<h2>📝 Changelog</h2>
+<h3>Version 2.0.0 (Current)</h3>
 <ul>
 <li>✅ Complete authentication system</li>
 <li>✅ Shopping cart functionality</li>
@@ -2142,7 +2188,7 @@ npm <span class="hljs-keyword">install</span>
 <li>✅ Payment integration</li>
 <li>✅ Security enhancements</li>
 </ul>
-<h3 id="future-enhancements">Future Enhancements</h3>
+<h3>Future Enhancements</h3>
 <ul>
 <li>📧 Email notifications</li>
 <li>🔄 Password reset</li>
@@ -2154,12 +2200,11 @@ npm <span class="hljs-keyword">install</span>
 <li>🌍 Multi-currency support</li>
 </ul>
 <hr>
-<h2 id="-license">📄 License</h2>
+<h2>📄 License</h2>
 <p>MIT License - Feel free to use for personal and commercial projects</p>
 <hr>
 <p><strong>End of Documentation</strong></p>
 <p>For questions or issues, please create an issue in the repository or contact the development team.</p>
-
 
 </body>
 </html>
