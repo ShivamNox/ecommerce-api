@@ -1,0 +1,95 @@
+MIT License
+
+Copyright (c) 2025 [Your Name or Organization]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This project uses the following open-source packages:
+
+### Dependencies
+
+- **Express** (MIT License) - https://github.com/expressjs/express
+- **Mongoose** (MIT License) - https://github.com/Automattic/mongoose
+- **bcryptjs** (MIT License) - https://github.com/dcodeIO/bcrypt.js
+- **jsonwebtoken** (MIT License) - https://github.com/auth0/node-jsonwebtoken
+- **Stripe** (MIT License) - https://github.com/stripe/stripe-node
+- **Joi** (BSD-3-Clause License) - https://github.com/hapijs/joi
+- **Helmet** (MIT License) - https://github.com/helmetjs/helmet
+- **CORS** (MIT License) - https://github.com/expressjs/cors
+- **dotenv** (BSD-2-Clause License) - https://github.com/motdotla/dotenv
+- **express-rate-limit** (MIT License) - https://github.com/express-rate-limit/express-rate-limit
+- **morgan** (MIT License) - https://github.com/expressjs/morgan
+
+### Development Dependencies
+
+- **nodemon** (MIT License) - https://github.com/remy/nodemon
+
+---
+
+## Stripe Terms
+
+This project integrates with Stripe for payment processing. Use of Stripe is subject to:
+- Stripe Terms of Service: https://stripe.com/legal
+- Stripe Privacy Policy: https://stripe.com/privacy
+
+---
+
+## MongoDB Terms
+
+This project uses MongoDB as its database. Use of MongoDB is subject to:
+- MongoDB Server Side Public License (SSPL)
+- MongoDB Atlas Terms: https://www.mongodb.com/legal/terms-of-use
+
+---
+
+## Additional Terms
+
+### API Usage
+- This software is provided for educational and commercial purposes
+- You may use this API in your own projects freely
+- Attribution is appreciated but not required
+
+### Trademark Notice
+- "Stripe" is a registered trademark of Stripe, Inc.
+- "MongoDB" is a registered trademark of MongoDB, Inc.
+- This project is not officially endorsed by these companies
+
+### Liability
+- The author(s) of this software are not responsible for any data loss, security breaches, or financial losses
+- Use in production environments is at your own risk
+- Ensure proper security measures are implemented before deploying
+
+### Support
+- This software is provided "as-is" without any warranty
+- Community support available via GitHub issues
+- No guaranteed response times or bug fixes
+
+---
+
+## Contributing
+
+By contributing to this project, you agree that your contributions will be licensed under the MIT License.
+
+---
+
+**Questions about licensing?** Contact: [your.email@example.com]
